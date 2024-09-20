@@ -1,0 +1,33 @@
+.main__content {
+  /* position/size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  /* font */
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main__title {
+  /* font */
+  font-family: "Roboto Slab Regular", "inter Regular", sans-serif;
+  font-size: 60px;
+  line-height: 64px;
+  /* color */
+  color: rgb(255, 255, 255);
+  /* position/size */
+  width: 608px;
+  height: 128px;
+  padding: 0;
+}
+
+.main__subtitle {
+  /* color */
+  color: rgb(255, 255, 255);
+  /* position/size */
+  padding: 0;
+  margin-bottom: 80px;
+}

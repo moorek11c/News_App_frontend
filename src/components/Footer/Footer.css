@@ -1,0 +1,41 @@
+.footer {
+  /* position/size */
+  height: 80px;
+  /* font */
+  font-family: "Roboto Regular", "Inter", sans-serif;
+  line-height: 24px;
+}
+
+.footer__container {
+  /* position/size */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.footer__info {
+  /* color font */
+  color: rgba(182, 188, 191, 1);
+}
+
+.footer__links {
+  /* position/size */
+  display: flex;
+  align-items: center;
+  /* cursor */
+  cursor: pointer;
+}
+
+.footer__link {
+  /* position/size */
+  margin-right: 40px;
+}
+
+/* .footer__links_social {
+TODO: Link Them
+} */
+
+.footer__link_social {
+  /* position/size */
+  margin-right: 24px;
+}

@@ -1,0 +1,47 @@
+.navlinks__container {
+  /* position  */
+  display: flex;
+  padding: 0;
+  align-items: center;
+  margin-right: 104px;
+  /* text */
+  font-family: "Roboto Medium", sans-serif, "Inter";
+}
+
+.navlink__home {
+  /* position */
+  margin-right: 13px;
+  padding: 0;
+
+  /* background/color */
+  background: transparent;
+  color: rgb(255, 255, 255);
+
+  /* border */
+  border: none;
+
+  /* cursor */
+  cursor: pointer;
+}
+
+.navlink__sign-in {
+  /* position/size */
+  height: 48px;
+  width: 176px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background/color */
+  background: transparent;
+  color: rgb(255, 255, 255);
+  /* border */
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  /* text */
+  text-decoration: none;
+
+  /* cursor */
+  cursor: pointer;
+}
+/* TODO */
+/* add underline and active traits */
