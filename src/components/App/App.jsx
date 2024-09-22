@@ -8,7 +8,8 @@ import Main from "../Main/Main";
 import SearchForm from "../Main/SearchForm/SearchForm";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
-import SignInPopup from "../Popups/SigninPopup/SignInPopup";
+import SignInPopup from "../PopupWithForm/SigninPopup/SignInPopup";
+import SignupPopup from "../PopupWithForm/SignupPopup/SignupPopup";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Footer />
         </div>
         <SignInPopup />
+        <SignupPopup />
       </div>
     </PopupProvider>
   );

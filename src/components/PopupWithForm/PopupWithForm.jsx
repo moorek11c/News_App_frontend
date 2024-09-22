@@ -1,7 +1,7 @@
 import "./PopupWithForm.css";
-import popupClose from "../../../Assets/CloseBtn.svg";
+import popupClose from "../../Assets/CloseBtn.svg";
 
-import { usePopup } from "../../Hooks/usePopup";
+import { usePopup } from "../Hooks/usePopup";
 
 function PopupWithForm({ popupName, title, children, buttonText }) {
   const { isOpen, close } = usePopup(popupName);
@@ -10,7 +10,7 @@ function PopupWithForm({ popupName, title, children, buttonText }) {
 
   return (
     <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
-      <div className="popup__container">
+      <div className={`popup__container popup__container_${popupName}`}>
         <h2 className="popup__title">{title}</h2>
         <button className="popup__close-btn">
           <img

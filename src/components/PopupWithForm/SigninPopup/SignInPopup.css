@@ -1,0 +1,67 @@
+.sign-in__form {
+  /* position */
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+
+  /* fonts */
+  font-family: "Inter Regular", sans-serif, serif;
+}
+
+.popup__label-type-email {
+  /* position */
+  margin-bottom: 31px;
+}
+
+.popup__label-type-password {
+  /* position */
+  margin-bottom: 39px;
+}
+
+.popup__input {
+  /* fonts */
+  font-size: 12px;
+  line-height: 14.52px;
+  font-family: "Inter Regular", sans-serif, serif;
+}
+
+.input__name {
+  /* position */
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+  /* font */
+  font-size: 12px;
+  color: rgba(47, 113, 229, 1);
+}
+
+.popup__submit-btn {
+  /* position/size */
+  width: 358px;
+  height: 64px;
+  margin-left: 35px;
+  /* border */
+  border: none;
+  border-radius: 50px;
+  /* color */
+  background-color: rgba(47, 113, 229, 1);
+  color: rgb(255, 255, 255);
+  /* font */
+  font-family: "Roboto Medium", "Inter", sans-serif;
+  /* cursor */
+  cursor: pointer;
+}
+/* TODO Fix this below */
+.span__class-sign-up {
+  color: rgba(47, 113, 229, 1);
+}
+
+.signup__btn {
+  display: block;
+  position: relative;
+  bottom: -100px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

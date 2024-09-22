@@ -56,6 +56,10 @@
   border-radius: 20px;
 }
 
+.popup__container_SignUpPopup {
+  height: 458px;
+}
+
 .popup__title {
   /* fonts */
   font-size: 24px;

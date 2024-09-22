@@ -1,4 +1,4 @@
-.sign-in__form {
+.sign-up__form {
   /* position */
   display: flex;
   flex-direction: column;
@@ -11,11 +11,13 @@
 .popup__label-type-email {
   /* position */
   margin-bottom: 31px;
+  padding: 0;
 }
 
 .popup__label-type-password {
   /* position */
-  margin-bottom: 39px;
+  margin-bottom: 31px;
+  padding: 0;
 }
 
 .popup__input {
@@ -23,8 +25,10 @@
   font-size: 12px;
   line-height: 14.52px;
   font-family: "Inter Regular", sans-serif, serif;
+  /* position/size */
+  margin: 0;
+  padding: 0;
 }
-
 .input__name {
   /* position */
   margin: 0;
@@ -35,17 +39,23 @@
   color: rgba(47, 113, 229, 1);
 }
 
-.popup__submit-btn {
-  /* position/size */
-  width: 358px;
-  height: 64px;
-  margin-left: 35px;
-  /* border */
+.popup__label-type-email-username {
+  margin: 0;
+  padding: 0;
+}
+
+.popup__input_username {
+  margin-bottom: 39px;
+  padding: 0;
+}
+
+.signin__btn {
+  display: block;
+  position: relative;
+  bottom: -100px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
   border: none;
-  border-radius: 50px;
-  /* color */
-  background-color: rgba(47, 113, 229, 1);
-  color: rgb(255, 255, 255);
-  /* font */
-  font-family: "Roboto Medium", "Inter", sans-serif;
+  cursor: pointer;
 }
