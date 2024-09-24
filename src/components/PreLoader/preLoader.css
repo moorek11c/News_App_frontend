@@ -1,0 +1,41 @@
+.circle__preloader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #444;
+  border-bottom-color: #888;
+
+  border-radius: 50%;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto 24px auto;
+
+  animation: spin 0.75s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle__preloader-container {
+  background-color: rgba(245, 246, 247, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 282px;
+}
+
+.circle__preloader-title {
+  font-family: "Roboto Regular", "Inter", sans-serif;
+  font-size: 18px;
+  color: rgba(182, 188, 191, 1);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}

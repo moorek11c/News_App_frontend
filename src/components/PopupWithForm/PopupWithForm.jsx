@@ -3,7 +3,7 @@ import popupClose from "../../Assets/CloseBtn.svg";
 
 import { usePopup } from "../Hooks/usePopup";
 
-function PopupWithForm({ popupName, title, children, buttonText }) {
+function PopupWithForm({ popupName, title, children, buttonText, onSubmit }) {
   const { isOpen, close } = usePopup(popupName);
 
   if (!isOpen) return null;
@@ -20,7 +20,7 @@ function PopupWithForm({ popupName, title, children, buttonText }) {
             onClick={close}
           />
         </button>
-        <form className="popup__form">
+        <form noValidate onSubmit={onSubmit} className="popup__form">
           {children}
           <button type="submit" className="popup__submit-btn">
             {buttonText}

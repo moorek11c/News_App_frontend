@@ -1,5 +1,7 @@
 import "./SignInPopup.css";
 import { usePopup } from "../../Hooks/usePopup";
+import { useFormik } from "formik";
+import { signinValidationSchema } from "../Validation/ValidationSchemas";
 
 import PopupWithForm from "../PopupWithForm";
 
@@ -7,8 +9,24 @@ function SignInPopup() {
   // using logic from usePopup
   const { open: openSignUp } = usePopup("SignUpPopup");
 
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: signinValidationSchema,
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
-    <PopupWithForm popupName="SignInPopup" title="Sign in" buttonText="Sign in">
+    <PopupWithForm
+      onSubmit={formik.handleSubmit}
+      popupName="SignInPopup"
+      title="Sign in"
+      buttonText="Sign in"
+    >
       <div className="sign-in__form">
         <p className="input__name">Email</p>
         <label
@@ -18,9 +36,19 @@ function SignInPopup() {
           <input
             id="email-login"
             type="email"
-            className="popup__input"
+            name="email"
+            className={`popup__input ${
+              formik.errors.email && formik.touched.email ? "input__error" : ""
+            }`}
             placeholder="Enter email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            onSubmit={formik.handleSubmit}
           />
+          {formik.touched.email && formik.errors.email && (
+            <span className="error-message">{formik.errors.email}</span>
+          )}
         </label>
         <p className="input__name">Password</p>
         <label
@@ -31,9 +59,20 @@ function SignInPopup() {
             type="password"
             id="password-login"
             name="password"
-            className="popup__input"
+            className={`popup__input ${
+              formik.errors.password && formik.touched.password
+                ? "input__error"
+                : ""
+            }`}
             placeholder="Enter password"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.password}
+            onSubmit={formik.handleSubmit}
           />
+          {formik.touched.password && formik.errors.password && (
+            <span className="error-message">{formik.errors.password}</span>
+          )}
         </label>
         <button className="signup__btn" onClick={openSignUp}>
           or <span className="span__class-sign-up">sign up</span>

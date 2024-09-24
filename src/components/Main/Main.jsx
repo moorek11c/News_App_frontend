@@ -1,6 +1,25 @@
+import { useState } from "react";
+
 import "./Main.css";
 
+import SearchForm from "./SearchForm/SearchForm";
+import NewsCardList from "../NewsCardList/NewsCardList";
+import PreLoader from "../PreLoader/PreLoader";
+
 function Main() {
+  const [hasSearched, setHasSearched] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSearch = () => {
+    setIsLoading(true);
+    setHasSearched(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+      setHasSearched(true);
+    }, 2000); // Simulate a 2-second search operation
+  };
+
   return (
     <main className="main">
       <div className="main__content">
@@ -10,6 +29,9 @@ function Main() {
           account.
         </p>
       </div>
+      <SearchForm onSearch={handleSearch} />
+      {isLoading && <PreLoader />}
+      {!isLoading && hasSearched && <NewsCardList />}
     </main>
   );
 }

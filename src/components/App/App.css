@@ -1,12 +1,11 @@
 .Page {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(245, 246, 247, 1);
 }
 .page__content {
   max-width: 1440px;
-  background-image: url("../../Assets/BackGroundImage.jpg");
-  background-size: cover;
+  background: url("../../Assets/BackGroundImage.jpg");
+  background-size: contain;
   background-position: center;
-  object-fit: contain;
   background-repeat: no-repeat;
   height: 576px;
   z-index: 1;

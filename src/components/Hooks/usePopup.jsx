@@ -11,3 +11,7 @@ export const usePopup = (popupName) => {
 
   return { isOpen, open, close };
 };
+
+// this hook is used to open and close the popup
+// it uses the context to get the active popup and the functions to open and close the popup
+// it returns isOpen, open and close functions

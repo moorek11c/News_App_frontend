@@ -11,6 +11,7 @@
 .navlink__home {
   /* position */
   margin-right: 13px;
+  margin-bottom: 0;
   padding: 0;
 
   /* background/color */
@@ -43,5 +44,24 @@
   /* cursor */
   cursor: pointer;
 }
-/* TODO */
-/* add underline and active traits */
+
+.navlinks__list {
+  list-style: none;
+}
+.navlink {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.navlink--active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+}

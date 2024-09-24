@@ -4,7 +4,7 @@ import authorImg from "../../Assets/IMG_2350.png";
 
 function About() {
   return (
-    <>
+    <div>
       <div className="about">
         <div className="about__container">
           <img className="about__img" src={authorImg} alt="Author" />
@@ -19,7 +19,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

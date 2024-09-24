@@ -3,7 +3,6 @@
   font-family: "Roboto Medium", "Inter Medium", sans-serif;
   display: inline-block;
   position: relative;
-  justify-content: center;
   margin-bottom: 80px;
 }
 
@@ -14,6 +13,9 @@
   border: none;
   z-index: 2;
   margin-left: 416px;
+  /* font */
+  font-family: "Roboto Regular", sans-serif, serif;
+  color: black;
 }
 
 .search__input:focus {
