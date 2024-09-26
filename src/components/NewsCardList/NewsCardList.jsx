@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 
 import { SearchContext } from "../Contexts/SearchContext";
 import NewsCard from "./NewsCard/NewsCard";
+import NothingFound from "../Pages/NothingFound/NothingFound";
 import "./NewsCardList.css";
 
 const NewsCardList = () => {
@@ -20,6 +21,11 @@ const NewsCardList = () => {
   useEffect(() => {
     setVisibleArticles(3);
   }, [articles]);
+
+  // Check if there are no articles
+  if (articles.length === 0) {
+    return <NothingFound />;
+  }
 
   return (
     <div className="news__cards-container">

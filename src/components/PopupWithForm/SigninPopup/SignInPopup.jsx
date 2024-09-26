@@ -1,13 +1,17 @@
+import { useContext } from "react";
+
 import "./SignInPopup.css";
 import { usePopup } from "../../Hooks/usePopup";
 import { useFormik } from "formik";
 import { signinValidationSchema } from "../Validation/ValidationSchemas";
+import { UserContext } from "../../Contexts/UserContext";
 
 import PopupWithForm from "../PopupWithForm";
 
 function SignInPopup() {
   // using logic from usePopup
-  const { open: openSignUp } = usePopup("SignUpPopup");
+  const { open: openSignUp, close } = usePopup("SignUpPopup");
+  const { handleLogin } = useContext(UserContext);
 
   const formik = useFormik({
     initialValues: {
@@ -16,6 +20,11 @@ function SignInPopup() {
     },
     validationSchema: signinValidationSchema,
     onSubmit: (values) => {
+      handleLogin(values);
+      close();
+      // what to do here after login is successful
+      // right now it opens the confirmation popup
+      // then if you sign in again it will open the sign up popup
       console.log(values);
     },
   });

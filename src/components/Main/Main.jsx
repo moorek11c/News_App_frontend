@@ -17,7 +17,7 @@ function Main() {
     setTimeout(() => {
       setIsLoading(false);
       setHasSearched(true);
-    }, 2000); // Simulate a 2-second search operation
+    }, 2000);
   };
 
   return (

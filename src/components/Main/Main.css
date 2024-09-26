@@ -21,6 +21,8 @@
   /* position/size */
   width: 608px;
   height: 128px;
+  margin-top: 80px;
+  margin-bottom: 32px;
   padding: 0;
 }
 
@@ -29,5 +31,6 @@
   color: rgb(255, 255, 255);
   /* position/size */
   padding: 0;
-  margin-bottom: 64px;
+  margin: 0;
+  margin-bottom: 88px;
 }

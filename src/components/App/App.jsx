@@ -1,39 +1,44 @@
-import { useState } from "react";
-
 import "./App.css";
+
+import { Route, Routes } from "react-router-dom";
 
 // contexts
 import { PopupProvider } from "../Contexts/PopupContext";
 import { SearchProvider } from "../Contexts/SearchContext";
+import { UserProvider } from "../Contexts/UserContext";
 
-import Header from "../Header/Header";
-import Main from "../Main/Main";
-import About from "../About/About";
-import Footer from "../Footer/Footer";
 import SignInPopup from "../PopupWithForm/SigninPopup/SignInPopup";
 import SignupPopup from "../PopupWithForm/SignupPopup/SignupPopup";
-// import SearchForm from "../Main/SearchForm/SearchForm";
-// import NewsCardList from "../NewsCardList/NewsCardList";
+import ConfirmationPopup from "../PopupWithForm/ConfirmationPopup/ConfirmationPopup";
+import SavedNewsPage from "../Pages/SavedNewsPage/SavedNewsPage";
+import HomePage from "../Pages/HomePage/HomePage";
+import { SavedArticlesProvider } from "../Contexts/SavedArticlesContext";
 
 function App() {
-  // State to store whether the user has searched for news
-
   return (
-    <PopupProvider>
-      <SearchProvider>
-        <div className="page">
-          <div className="page__content">
-            <Header />
-            <Main />
-
-            <About />
-            <Footer />
-          </div>
-          <SignInPopup />
-          <SignupPopup />
-        </div>
-      </SearchProvider>
-    </PopupProvider>
+    <SavedArticlesProvider>
+      <UserProvider>
+        <PopupProvider>
+          <SearchProvider>
+            <div className="page">
+              <div className="page__content">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route
+                    path="/saved-news"
+                    element={<SavedNewsPage isSavedNewsPage={true} />}
+                  />
+                  <Route path="*" element={<HomePage />} />
+                </Routes>
+              </div>
+              <SignInPopup />
+              <SignupPopup />
+              <ConfirmationPopup />
+            </div>
+          </SearchProvider>
+        </PopupProvider>
+      </UserProvider>
+    </SavedArticlesProvider>
   );
 }
 

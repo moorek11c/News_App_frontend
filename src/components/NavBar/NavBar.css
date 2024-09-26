@@ -1,3 +1,7 @@
+.navbar {
+  display: flex;
+}
+
 .navlinks__container {
   /* position  */
   display: flex;
@@ -10,8 +14,23 @@
 
 .navlink__home {
   /* position */
-  margin-right: 13px;
   margin-bottom: 0;
+  padding: 0;
+
+  /* background/color */
+  background: transparent;
+  color: rgb(255, 255, 255);
+
+  /* border */
+  border: none;
+
+  /* cursor */
+  cursor: pointer;
+}
+
+.navlink__saved-news {
+  /* position */
+  margin-left: 76px;
   padding: 0;
 
   /* background/color */
@@ -32,6 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 42px;
   /* background/color */
   background: transparent;
   color: rgb(255, 255, 255);
@@ -47,7 +67,10 @@
 
 .navlinks__list {
   list-style: none;
+  display: flex;
+  flex-direction: row;
 }
+
 .navlink {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -64,4 +87,40 @@
   position: absolute;
   bottom: -32px;
   left: 0;
+}
+
+.navlink__sign-out {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(255, 255, 255);
+  margin-left: 64px;
+  width: 112px;
+  height: 48px;
+  border-radius: 50px;
+  border: 1px solid rgb(255, 255, 255);
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar__saved-news {
+  display: flex;
+  /* max-width: 1440px; */
+}
+
+.navbar__saved-news .navlink {
+  color: black;
+}
+
+.navbar__saved-news .navlink__sign-out {
+  color: black;
+  border-color: black;
+}
+
+.navbar__saved-news .navlink--active::after {
+  background-color: black;
+  width: 176px;
+  position: absolute;
+  left: -40px;
 }

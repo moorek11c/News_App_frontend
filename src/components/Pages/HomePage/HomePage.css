@@ -1,0 +1,15 @@
+.home-page {
+  background-image: url("../../../Assets/BackGroundImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 576px;
+  width: 100%;
+}
+
+.header__elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 1440px;
+}

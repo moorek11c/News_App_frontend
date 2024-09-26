@@ -38,3 +38,11 @@
   background-color: rgb(47, 113, 229);
   cursor: pointer;
 }
+
+.search__button:hover {
+  background-color: rgba(52, 126, 255, 1);
+}
+
+.search__button:active {
+  background-color: rgba(42, 101, 204, 1);
+}

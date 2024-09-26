@@ -41,3 +41,7 @@
   height: 64px;
   cursor: pointer;
 }
+
+.button__show-more:hover {
+  background-color: rgba(232, 232, 232, 1);
+}

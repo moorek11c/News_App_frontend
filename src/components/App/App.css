@@ -3,10 +3,7 @@
 }
 .page__content {
   max-width: 1440px;
-  background: url("../../Assets/BackGroundImage.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
   height: 576px;
   z-index: 1;
   margin: 0 auto;

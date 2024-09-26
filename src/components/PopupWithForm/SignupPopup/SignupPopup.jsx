@@ -1,12 +1,18 @@
 import "./SignupPopup.css";
-
+import { useContext } from "react";
 import PopupWithForm from "../PopupWithForm";
 import { usePopup } from "../../Hooks/usePopup";
 import { useFormik } from "formik";
 import { signupValidationSchema } from "../Validation/ValidationSchemas";
 
+import { UserContext } from "../../Contexts/UserContext";
+
 function SignupPopup() {
   const { open: openSignIn } = usePopup("SignInPopup");
+
+  const { open: openConfirmation } = usePopup("ConfirmationPopup");
+
+  const { handleSignUp } = useContext(UserContext);
 
   const formik = useFormik({
     initialValues: {
@@ -15,7 +21,10 @@ function SignupPopup() {
       username: "",
     },
     validationSchema: signupValidationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
+      handleSignUp(values);
+      resetForm();
+      openConfirmation();
       console.log("submitted values", values);
     },
   });

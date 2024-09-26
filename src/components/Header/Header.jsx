@@ -1,18 +1,21 @@
 import "./Header.css";
 
 // images
-import headerLogo from "../../Assets/NewsExplorer.svg";
+import headerLogo from "../../Assets/NewsExplorerlight.svg";
+import headerLogoDark from "../../Assets/NewsExplorerdark.svg";
 
-// components
-import NavBar from "./NavBar/NavBar";
-
-const Header = () => {
+const Header = ({ isSavedNewsPage }) => {
   return (
     <>
-      <header className="header">
+      <header
+        className={isSavedNewsPage ? "header header__saved-news" : "header"}
+      >
         <div className="header__container">
-          <img className="header__logo" src={headerLogo} alt="NewsExplorer" />
-          <NavBar />
+          <img
+            className="header__logo"
+            src={isSavedNewsPage ? headerLogoDark : headerLogo}
+            alt="NewsExplorer"
+          />
         </div>
       </header>
     </>

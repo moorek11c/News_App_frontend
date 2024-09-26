@@ -4,7 +4,6 @@
   padding: 0;
   height: 80px;
   /* border */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   /* layer */
   z-index: 1;
 
@@ -23,4 +22,9 @@
   width: 200px;
   height: 24px;
   margin: 30px 0 26px 104px;
+}
+
+.header__saved-news .header__container {
+  /* position/size */
+  justify-content: space-between;
 }

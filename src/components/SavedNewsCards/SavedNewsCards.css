@@ -1,0 +1,12 @@
+.saved-cards__page {
+  background-color: rgba(245, 246, 247, 1);
+}
+
+.saved-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 16px;
+  padding-top: 80px;
+}

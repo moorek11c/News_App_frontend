@@ -1,1 +1,6 @@
-For auxiliary functions and API requests
+Saving News Cards
+1. when clicking on the bookmark we want to get all of the info about the card 
+2. once we have information we need to send it to the savedNewsCard page 
+3. and render the new card on the saved news page 
+
+Need protected routes 

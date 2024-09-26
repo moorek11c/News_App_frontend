@@ -22,7 +22,10 @@ function PopupWithForm({ popupName, title, children, buttonText, onSubmit }) {
         </button>
         <form noValidate onSubmit={onSubmit} className="popup__form">
           {children}
-          <button type="submit" className="popup__submit-btn">
+          <button
+            type="submit"
+            className={`popup__submit-btn popup__submit-btn_${popupName}`}
+          >
             {buttonText}
           </button>
         </form>
