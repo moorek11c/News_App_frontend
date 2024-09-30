@@ -16,10 +16,10 @@ import { SavedArticlesProvider } from "../Contexts/SavedArticlesContext";
 
 function App() {
   return (
-    <SavedArticlesProvider>
-      <UserProvider>
-        <PopupProvider>
-          <SearchProvider>
+    <UserProvider>
+      <PopupProvider>
+        <SearchProvider>
+          <SavedArticlesProvider>
             <div className="page">
               <div className="page__content">
                 <Routes>
@@ -35,10 +35,10 @@ function App() {
               <SignupPopup />
               <ConfirmationPopup />
             </div>
-          </SearchProvider>
-        </PopupProvider>
-      </UserProvider>
-    </SavedArticlesProvider>
+          </SavedArticlesProvider>
+        </SearchProvider>
+      </PopupProvider>
+    </UserProvider>
   );
 }
 

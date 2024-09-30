@@ -1,10 +1,8 @@
 .Page {
   background-color: rgba(245, 246, 247, 1);
+  max-width: 1440px;
 }
 .page__content {
-  max-width: 1440px;
-
-  height: 576px;
   z-index: 1;
   margin: 0 auto;
   max-width: 1440px;

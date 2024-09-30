@@ -29,6 +29,11 @@ function SignInPopup() {
     },
   });
 
+  const handleOpenSignUp = () => {
+    formik.resetForm(); // Reset form state
+    openSignUp();
+  };
+
   return (
     <PopupWithForm
       onSubmit={formik.handleSubmit}
@@ -83,7 +88,7 @@ function SignInPopup() {
             <span className="error-message">{formik.errors.password}</span>
           )}
         </label>
-        <button className="signup__btn" onClick={openSignUp}>
+        <button className="signup__btn" onClick={handleOpenSignUp}>
           or <span className="span__class-sign-up">sign up</span>
         </button>
       </div>

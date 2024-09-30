@@ -14,7 +14,6 @@
 .header__container {
   /* position/size */
   display: flex;
-  justify-content: space-between;
 }
 
 .header__logo {
@@ -27,4 +26,22 @@
 .header__saved-news .header__container {
   /* position/size */
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    /* position/size */
+    height: 66px;
+  }
+
+  .header__logo {
+    /* position/size */
+    height: 24px;
+    margin: 23px 0 18px 40px;
+  }
+
+  .header__saved-news .header__container {
+    /* position/size */
+    justify-content: initial;
+  }
 }

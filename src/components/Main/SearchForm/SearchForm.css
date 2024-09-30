@@ -46,3 +46,20 @@
 .search__button:active {
   background-color: rgba(42, 101, 204, 1);
 }
+
+@media screen and (max-width: 768px) {
+  .search__form {
+    margin-bottom: 48px;
+  }
+
+  .search__input {
+    width: 448px;
+    height: 54px;
+    margin-left: 160px;
+  }
+
+  .search__button {
+    width: 160px;
+    height: 56px;
+  }
+}

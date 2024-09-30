@@ -6,14 +6,14 @@
   max-width: 1440px;
   width: 100%;
   /* font */
-  font-family: "Roboto Regular", sans-serif;
+  font-family: "Roboto Regular", sans-serif, serif;
   font-size: 18px;
   line-height: 24px;
 }
 
 .main__title {
   /* font */
-  font-family: "Roboto Slab Regular", "inter Regular", sans-serif;
+  font-family: "Roboto Slab Regular", sans-serif, serif;
   font-size: 60px;
   line-height: 64px;
   /* color */
@@ -33,4 +33,21 @@
   padding: 0;
   margin: 0;
   margin-bottom: 88px;
+}
+
+@media screen and (max-width: 768px) {
+  .main__title {
+    margin-top: 38px;
+    margin-bottom: 16px;
+    width: 385px;
+    height: 80px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .main__subtitle {
+    height: 48px;
+    width: 452px;
+    margin-bottom: 48px;
+  }
 }

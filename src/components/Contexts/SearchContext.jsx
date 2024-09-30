@@ -1,7 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import getNews from "../../utils/API/NewsApi";
 
 export const SearchContext = createContext();
+
+export const UseSearchContext = () => useContext(SearchContext);
 // Create the provider component
 export const SearchProvider = ({ children }) => {
   const [query, setQuery] = useState("");

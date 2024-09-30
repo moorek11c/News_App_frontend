@@ -21,5 +21,4 @@ export const PopupProvider = ({ children }) => {
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const usePopupContext = () => useContext(PopupContext);
+export const UsePopupContext = () => useContext(PopupContext);

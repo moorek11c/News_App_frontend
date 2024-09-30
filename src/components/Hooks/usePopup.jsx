@@ -1,7 +1,7 @@
-import { usePopupContext } from "../Contexts/PopupContext";
+import { UsePopupContext } from "../Contexts/PopupContext";
 
 export const usePopup = (popupName) => {
-  const { activePopup, openPopup, closePopup } = usePopupContext();
+  const { activePopup, openPopup, closePopup } = UsePopupContext();
 
   const isOpen = activePopup === popupName;
 

@@ -46,3 +46,36 @@
   /* position/size */
   width: 600px;
 }
+
+@media screen and (max-width: 768px) {
+  .about {
+    height: 354px;
+  }
+
+  .about__img {
+    height: 232px;
+    width: 232px;
+    margin: 61px 0 61px 0;
+  }
+
+  .about__container {
+    margin-left: 40px;
+  }
+
+  .about__content {
+    margin-top: 40px;
+    margin-left: 32px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 40px;
+    width: 424px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  .about__description {
+    margin: 0;
+    width: 424px;
+  }
+}

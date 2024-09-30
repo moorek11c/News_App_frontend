@@ -16,3 +16,29 @@
   line-height: 46px;
   font-family: "Roboto Slab Regular", sans-serif, "Arial";
 }
+
+@media screen and (max-width: 768px) {
+  .saved-news__main-content {
+    padding: 24px 16px 32px 40px;
+  }
+
+  .saved-news__title {
+    font-size: 14px;
+    width: 712px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .saved-news__subtitle {
+    margin-bottom: 16px;
+    width: 336px;
+    height: 68px;
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .saved-news__keywords {
+    margin-bottom: 0;
+  }
+}

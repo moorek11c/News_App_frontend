@@ -2,8 +2,9 @@
   background-image: url("../../../Assets/BackGroundImage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 576px;
-  width: 100%;
+  max-width: 1440px;
 }
 
 .header__elements {
@@ -12,4 +13,17 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 1440px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__elements {
+    width: 768px;
+    justify-content: space-between;
+  }
+
+  .home-page {
+    width: 768px;
+    height: 400px;
+    background-size: cover;
+  }
 }

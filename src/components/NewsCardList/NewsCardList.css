@@ -20,10 +20,6 @@
   padding-left: 104px;
 }
 
-.card__img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
 .button__container {
   padding: 80px 0;
 }
@@ -44,4 +40,18 @@
 
 .button__show-more:hover {
   background-color: rgba(232, 232, 232, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .news__card-list {
+    padding-top: 32px;
+    gap: 8px;
+  }
+
+  .search__container-title {
+    font-size: 30px;
+  }
+  .button__container {
+    padding: 32px 0 40px;
+  }
 }

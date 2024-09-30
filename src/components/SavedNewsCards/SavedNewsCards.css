@@ -10,3 +10,10 @@
   gap: 16px;
   padding-top: 80px;
 }
+@media screen and (max-width: 768px) {
+  .saved-cards__list {
+    padding-top: 32px;
+    margin: 0;
+    gap: 8px;
+  }
+}
