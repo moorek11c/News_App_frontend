@@ -21,20 +21,17 @@ function App() {
         <SearchProvider>
           <SavedArticlesProvider>
             <div className="page">
-              <div className="page__content">
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route
-                    path="/saved-news"
-                    element={<SavedNewsPage isSavedNewsPage={true} />}
-                  />
-                  <Route path="*" element={<HomePage />} />
-                </Routes>
-              </div>
-              <SignInPopup />
-              <SignupPopup />
-              <ConfirmationPopup />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                  path="/saved-news"
+                  element={<SavedNewsPage isSavedNewsPage={true} />}
+                />
+              </Routes>
             </div>
+            <SignInPopup />
+            <SignupPopup />
+            <ConfirmationPopup />
           </SavedArticlesProvider>
         </SearchProvider>
       </PopupProvider>

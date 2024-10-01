@@ -177,4 +177,48 @@
     left: 8px;
     top: 8px;
   }
+
+  @media screen and (max-width: 320px) {
+    .card__content {
+      width: 288px;
+      height: 440px;
+    }
+
+    .card__title {
+      font-size: 22px;
+      height: 48px;
+      margin-bottom: 10px;
+      line-height: 24px;
+      text-overflow: ellipsis;
+    }
+    .news__card {
+      width: 288px;
+      height: 440px;
+    }
+    .card__img {
+      width: 288px;
+      height: 196px;
+    }
+
+    .card__info {
+      padding: 0 16px;
+    }
+    .card__date {
+      margin-top: 16px;
+    }
+
+    .card__description {
+      height: 88px;
+      width: 256px;
+    }
+
+    .hover__tip {
+      width: 160px;
+      left: -170px;
+    }
+    .card__keyword {
+      left: 8px;
+      top: 8px;
+    }
+  }
 }

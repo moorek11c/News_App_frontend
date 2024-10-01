@@ -27,3 +27,18 @@
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 320px) {
+  .popup__confirmation {
+    margin-left: 16px;
+  }
+
+  .popup__confirmation-title {
+    margin: 0;
+  }
+
+  .popup__submit-btn_ConfirmationPopup {
+    margin-top: 14px;
+    padding-bottom: 51px;
+  }
+}

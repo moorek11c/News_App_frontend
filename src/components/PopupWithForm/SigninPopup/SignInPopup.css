@@ -65,3 +65,15 @@
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 320px) {
+  .sign-in__form {
+    margin-left: 16px;
+  }
+
+  .popup__submit-btn {
+    width: 288px;
+    height: 64px;
+    margin-left: 20px;
+  }
+}

@@ -21,7 +21,7 @@
 }
 
 .button__container {
-  padding: 80px 0;
+  padding: 64px 0 80px 0;
 }
 
 .button__show-more {
@@ -53,5 +53,28 @@
   }
   .button__container {
     padding: 32px 0 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news__card-list {
+    padding-top: 58px;
+  }
+  .search__container-title {
+    margin: 0;
+    padding-left: 16px;
+    padding-top: 32px;
+  }
+  .button__container {
+    padding: 16px 0 24px;
+  }
+
+  .button__show-more {
+    width: 288px;
+    height: 56px;
+  }
+
+  .news__card-list {
+    margin: 0 auto;
   }
 }

@@ -1,33 +1,30 @@
 .footer {
-  /* position/size */
   height: 80px;
-  /* font */
   font-family: "Roboto Regular", "Inter", sans-serif;
   line-height: 24px;
 }
 
 .footer__container {
-  /* position/size */
   display: flex;
-  justify-content: space-between;
-  margin-top: 80px;
 }
 
 .footer__info {
-  /* color font */
   color: rgba(182, 188, 191, 1);
+  font-size: 16px;
+  margin-right: auto;
+}
+
+.footer__links-type-page {
+  display: flex;
 }
 
 .footer__links {
-  /* position/size */
   display: flex;
   align-items: center;
-  /* cursor */
   cursor: pointer;
 }
 
 .footer__link {
-  /* position/size */
   margin-right: 40px;
 }
 
@@ -36,6 +33,46 @@ TODO: Link Them
 } */
 
 .footer__link_social {
-  /* position/size */
   margin-right: 24px;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__container {
+    margin: 0;
+    padding: 20px 16px 22px;
+    height: 176px;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer__links {
+    margin: 0;
+    justify-content: space-between;
+    align-items: first baseline;
+  }
+  .footer__links-type-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__link-home {
+    padding-bottom: 26px;
+  }
+
+  .footer__link_social {
+    margin: 0;
+    margin-left: 26px;
+  }
+
+  .footer__info {
+    width: 288px;
+    height: 22px;
+    margin: 0;
+    margin-top: 38px;
+    align-items: flex-end;
+  }
+
+  .footer__link {
+    margin: 0;
+  }
 }

@@ -1,5 +1,4 @@
 .popup {
-  /* position/size popup */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,51 +7,38 @@
   bottom: 0;
   left: 0;
   right: 0;
-  /* color */
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
-  /* visibility */
   visibility: hidden;
-  /* effects */
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
 }
 
 .popup_opened {
   visibility: visible;
-  /* color */
   opacity: 1;
-  /* effects */
   transition-delay: 0s;
-  /* layer */
   z-index: 4;
 }
 
 .popup__close-btn {
-  /* position */
   position: absolute;
   top: -40px;
   right: -40px;
   width: 40px;
   height: 40px;
-  /* color */
   background-color: transparent;
-  /* border */
   border: none;
-  /* cursor */
   cursor: pointer;
 }
 
 .popup__container {
-  /* color */
   background-color: #fff;
-  /* position */
   display: flex;
   flex-direction: column;
   align-items: start;
   position: relative;
   width: 430px;
   height: 380px;
-  /* border */
   border-radius: 20px;
 }
 
@@ -67,11 +53,9 @@
 }
 
 .popup__title {
-  /* fonts */
   font-size: 24px;
   line-height: 28.13px;
   font-family: "Roboto Black";
-  /* position/size */
   margin: 34px 0 22px 36px;
 }
 
@@ -79,4 +63,44 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 358px;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__container {
+    width: 320px;
+    height: 536px;
+    position: relative;
+    bottom: 95px;
+  }
+
+  .popup__container_ConfirmationPopup {
+    height: 536px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .popup__title {
+    margin: 20px 0 20px 16px;
+  }
+
+  .popup__input {
+    width: 288px;
+  }
+
+  .popup__close {
+    width: 24px;
+    height: 24px;
+  }
+
+  .popup__close-btn {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    top: -108px;
+    left: 274px;
+  }
+  .popup__container_ConfirmationPopup .popup__close-btn {
+    top: -80px;
+    left: 274px;
+  }
 }

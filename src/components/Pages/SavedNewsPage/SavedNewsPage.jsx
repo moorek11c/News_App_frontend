@@ -1,5 +1,4 @@
 import "./SavedNewsPage.css";
-import NavBar from "../../NavBar/NavBar";
 import Header from "../../Header/Header";
 import SavedNewsMain from "../../SavedNewsMain/SavedNewsMain";
 import SavedNewsCards from "../../SavedNewsCards/SavedNewsCards";
@@ -9,7 +8,6 @@ function SavedNewsPage() {
     <>
       <div className="saved-news__container">
         <Header isSavedNewsPage={true} />
-        <NavBar isSavedNewsPage={true} />
       </div>
       <SavedNewsMain />
       <SavedNewsCards />
