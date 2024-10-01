@@ -90,6 +90,11 @@
   cursor: pointer;
 }
 
+.bookmark__icon {
+  display: flex;
+  margin: 0 auto;
+}
+
 .hover__tip {
   position: absolute;
   align-content: center;

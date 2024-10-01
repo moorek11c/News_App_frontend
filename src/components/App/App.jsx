@@ -6,13 +6,15 @@ import { Route, Routes } from "react-router-dom";
 import { PopupProvider } from "../Contexts/PopupContext";
 import { SearchProvider } from "../Contexts/SearchContext";
 import { UserProvider } from "../Contexts/UserContext";
+import { SavedArticlesProvider } from "../Contexts/SavedArticlesContext";
 
 import SignInPopup from "../PopupWithForm/SigninPopup/SignInPopup";
 import SignupPopup from "../PopupWithForm/SignupPopup/SignupPopup";
 import ConfirmationPopup from "../PopupWithForm/ConfirmationPopup/ConfirmationPopup";
 import SavedNewsPage from "../Pages/SavedNewsPage/SavedNewsPage";
 import HomePage from "../Pages/HomePage/HomePage";
-import { SavedArticlesProvider } from "../Contexts/SavedArticlesContext";
+import NotFound from "../Pages/NotFoundPage/NotFoundPage";
+import ProtectedRoute from "../Navigation/ProtectedRoutes/ProtectedRoutes";
 
 function App() {
   return (
@@ -25,8 +27,13 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route
                   path="/saved-news"
-                  element={<SavedNewsPage isSavedNewsPage={true} />}
+                  element={
+                    <ProtectedRoute
+                      element={<SavedNewsPage isSavedNewsPage={true} />}
+                    />
+                  }
                 />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
             <SignInPopup />

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 import NavBar from "../Header/NavBar/NavBar";
@@ -11,11 +12,13 @@ const Header = ({ isSavedNewsPage }) => {
     <header
       className={isSavedNewsPage ? "header header__saved-news" : "header"}
     >
-      <img
-        className="header__logo"
-        src={isSavedNewsPage ? headerLogoDark : headerLogo}
-        alt="NewsExplorer"
-      />
+      <NavLink className="logo__home-link" to="/">
+        <img
+          className="header__logo"
+          src={isSavedNewsPage ? headerLogoDark : headerLogo}
+          alt="NewsExplorer"
+        />
+      </NavLink>
       <NavBar isSavedNewsPage={isSavedNewsPage} />
     </header>
   );

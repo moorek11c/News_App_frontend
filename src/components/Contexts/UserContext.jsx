@@ -12,6 +12,14 @@ export const UserProvider = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      localStorage.setItem("isLoggedIn", "true");
+    } else {
+      localStorage.setItem("isLoggedIn", "false");
+    }
+  });
+
   const handleLogin = () => {
     setIsLoggedIn(true);
     localStorage.setItem("isLoggedIn", "true");

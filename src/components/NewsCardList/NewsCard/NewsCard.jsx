@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import "./NewsCard.css";
-import BookmarkIcon from "../../../Assets/bookmark.svg";
+import BookmarkIcon from "../../../Assets/Rectanglebookmark.svg";
 import BookmarkFilled from "../../../Assets/bookmarkFilled.svg";
 import BookMarkHovered from "../../../Assets/bookmarkHover.svg";
+import { UserContext } from "../../Contexts/UserContext";
 
 import TrashIcon from "../../../Assets/trashIcon.svg";
 import TrashIconHovered from "../../../Assets/trashHover.svg";
@@ -11,6 +12,8 @@ import TrashIconHovered from "../../../Assets/trashHover.svg";
 import { UseSavedArticles } from "../../Contexts/SavedArticlesContext";
 
 const NewsCard = ({ article, isSaved }) => {
+  const { isLoggedIn } = useContext(UserContext);
+
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const [isTrashHovered, setIsTrashHovered] = useState(false);
@@ -77,12 +80,12 @@ const NewsCard = ({ article, isSaved }) => {
             onMouseEnter={handleBookmarkMouseEnter}
             onMouseLeave={handleBookmarkMouseLeave}
             className="news__card-btn"
-            onClick={handleBookmark}
+            onClick={isLoggedIn ? handleBookmark : null}
           >
             <img
               className="news-card__icon bookmark__icon"
               src={
-                isBookmarkHovered
+                isBookmarkHovered && isLoggedIn
                   ? BookMarkHovered
                   : isBookmarked
                   ? BookmarkFilled
@@ -90,7 +93,7 @@ const NewsCard = ({ article, isSaved }) => {
               }
               alt="bookmark icon"
             />
-            {isBookmarkHovered && (
+            {!isLoggedIn && isBookmarkHovered && (
               <div className="hover__tip">
                 <p className="hover__tip-text">Sign in to save articles</p>
               </div>

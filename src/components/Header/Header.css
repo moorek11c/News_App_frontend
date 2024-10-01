@@ -8,6 +8,10 @@
   border-bottom: 1px solid rgb(255, 255, 255, 0.3);
 }
 
+.logo__home-link {
+  margin-right: auto;
+}
+
 .header__logo {
   width: 200px;
   height: 24px;
