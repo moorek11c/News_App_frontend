@@ -16,9 +16,9 @@
   color: black;
 }
 
-/* .search__input:focus {
-  outline: none;
-} */
+.search__input:focus {
+  outline: 2px solid rgb(47, 113, 229);
+}
 
 .search__button {
   position: relative;

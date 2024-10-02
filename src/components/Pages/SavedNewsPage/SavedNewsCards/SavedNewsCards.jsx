@@ -1,8 +1,8 @@
 import "./SavedNewsCards.css";
 import { useContext } from "react";
-import { SearchContext } from "../Contexts/SearchContext";
-import NewsCard from "../NewsCardList/NewsCard/NewsCard";
-import SavedArticlesContext from "../Contexts/SavedArticlesContext";
+import { SearchContext } from "../../../Contexts/SearchContext";
+import NewsCard from "../../../NewsCardList/NewsCard/NewsCard";
+import SavedArticlesContext from "../../../Contexts/SavedArticlesContext";
 
 function SavedNewsCards() {
   const { savedArticles } = useContext(SavedArticlesContext);

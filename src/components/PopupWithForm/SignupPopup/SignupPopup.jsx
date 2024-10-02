@@ -21,11 +21,15 @@ function SignupPopup() {
       username: "",
     },
     validationSchema: signupValidationSchema,
-    onSubmit: (values, { resetForm }) => {
-      handleSignUp(values);
-      resetForm();
-      openConfirmation();
-      console.log("submitted values", values);
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await handleSignUp(values);
+        resetForm();
+        openConfirmation();
+        console.log("submitted values", values);
+      } catch (error) {
+        console.error("Error during signup:", error);
+      }
     },
   });
 
@@ -61,7 +65,7 @@ function SignupPopup() {
 
         <p className="input__name">Password</p>
         <label
-          htmlFor="password-login"
+          htmlFor="password-signup"
           className="popup__label popup__label-type-password"
         >
           <input

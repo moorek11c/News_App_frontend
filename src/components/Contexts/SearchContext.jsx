@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import getNews from "../../utils/API/NewsApi";
+import { getNews } from "../../utils/API/NewsApi";
 
 export const SearchContext = createContext();
 

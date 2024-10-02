@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "username": "user1",
+      "password": "password1",
+      "isLoggedIn": false
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "username": "user2",
+      "password": "password2",
+      "isLoggedIn": false
+    },
+    {
+      "id": "dc0d",
+      "email": "moorek11c@gmail.com",
+      "password": "1234567",
+      "username": "user",
+      "isLoggedIn": false
+    },
+    {
+      "id": "f9ea",
+      "email": "ryan123@mail.com",
+      "password": "123456789",
+      "username": "user",
+      "isLoggedIn": false
+    },
+    {
+      "id": "b4e0",
+      "email": "1ryan2@mail.com",
+      "password": "Bikes209",
+      "username": "Ryan",
+      "isLoggedIn": false
+    },
+    {
+      "id": "8897",
+      "email": "moorek11c11@gmail.com",
+      "password": "1234567890",
+      "username": "Ryan",
+      "isLoggedIn": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "title": "Sample News",
+      "content": "This is a sample news content.",
+      "author": "Author Name",
+      "date": "2023-10-01"
+    },
+    {
+      "id": "1bc6",
+      "source": {
+        "id": null,
+        "name": "Gizmodo.com"
+      },
+      "author": "Ed Cara",
+      "title": "Gizmodo Science Fair: A Longer Life for Big Dogs",
+      "description": "The biotech company Loyal is developing several drugs that will try, for the first time, to directly extend a dog's life.",
+      "url": "https://gizmodo.com/science-fair-loyal-longer-life-for-dogs-1851462292",
+      "urlToImage": "https://gizmodo.com/app/uploads/2024/09/Boo-dog_r.jpg",
+      "publishedAt": "2024-09-24T12:00:55Z",
+      "content": "Scientists at the animal pharmaceutical company Loyal are winners of the 2024 Gizmodo Science Fair for their research into drugs that could extend the lifespans of big and small dogs alike.\r\nThe ques… [+3992 chars]"
+    }
+  ]
+}

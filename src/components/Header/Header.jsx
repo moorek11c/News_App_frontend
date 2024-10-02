@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-import NavBar from "../Header/NavBar/NavBar";
+import NavBar from "../Navigation/NavBar/NavBar";
 
 // images
 import headerLogo from "../../Assets/NewsExplorerlight.svg";

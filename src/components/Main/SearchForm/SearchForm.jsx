@@ -6,6 +6,7 @@ const SearchForm = ({ onSearch }) => {
   // State to store the search query
 
   const [query, setQuery] = useState("");
+  const [error, setError] = useState("");
 
   // Destructure the handleSearch function from the SearchContext
 
@@ -17,10 +18,24 @@ const SearchForm = ({ onSearch }) => {
     setQuery(event.target.value);
   };
 
+  // function to check if the search query is empty
+
+  const checkQuery = () => {
+    if (query.trim() === "") {
+      setError("Please enter a keyword!");
+      return true;
+    }
+    return false;
+  };
+
   // Function to handle the form submission
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (checkQuery()) {
+      return;
+    }
     handleSearch(query);
     onSearch();
   };
@@ -32,7 +47,7 @@ const SearchForm = ({ onSearch }) => {
           <input
             value={query}
             onChange={handleInputChange}
-            placeholder="Search..."
+            placeholder={error || "Search..."}
             className="search__input"
             type="text"
           />

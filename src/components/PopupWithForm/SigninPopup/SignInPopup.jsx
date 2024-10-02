@@ -9,7 +9,6 @@ import { UserContext } from "../../Contexts/UserContext";
 import PopupWithForm from "../PopupWithForm";
 
 function SignInPopup() {
-  // using logic from usePopup
   const { open: openSignUp, close } = usePopup("SignUpPopup");
   const { handleLogin } = useContext(UserContext);
 
@@ -19,13 +18,15 @@ function SignInPopup() {
       password: "",
     },
     validationSchema: signinValidationSchema,
-    onSubmit: (values) => {
-      handleLogin(values);
-      close();
-      // what to do here after login is successful
-      // right now it opens the confirmation popup
-      // then if you sign in again it will open the sign up popup
-      console.log(values);
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await handleLogin(values);
+        resetForm();
+        close();
+        console.log("submitted values", values);
+      } catch (error) {
+        console.error("Error during signin:", error);
+      }
     },
   });
 

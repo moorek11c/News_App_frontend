@@ -12,7 +12,7 @@ import { UserContext } from "../../Contexts/UserContext";
 
 function NavBar({ isSavedNewsPage }) {
   const { open: openSignIn } = usePopup("SignInPopup");
-  const { isLoggedIn, handleLogout } = useContext(UserContext);
+  const { isLoggedIn, username, handleLogout } = useContext(UserContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Toggle the mobile menu
@@ -57,7 +57,7 @@ function NavBar({ isSavedNewsPage }) {
         type="button"
         className="navlink__sign-out"
       >
-        <p className="user__name-logout">user</p>
+        <p className="user__name-logout">{username}</p>
         <img className="logout__icon" src={icon} alt="logout" />
       </button>
     ) : (

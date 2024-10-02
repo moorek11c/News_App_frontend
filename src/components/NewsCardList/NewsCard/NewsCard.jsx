@@ -11,6 +11,8 @@ import TrashIconHovered from "../../../Assets/trashHover.svg";
 
 import { UseSavedArticles } from "../../Contexts/SavedArticlesContext";
 
+import { saveCard } from "../../../utils/API/NewsApi";
+
 const NewsCard = ({ article, isSaved }) => {
   const { isLoggedIn } = useContext(UserContext);
 
@@ -20,7 +22,7 @@ const NewsCard = ({ article, isSaved }) => {
 
   const [isBookmarkHovered, setIsBookmarkHovered] = useState(false);
 
-  const { saveArticle } = UseSavedArticles();
+  const { saveArticle, deleteArticle } = UseSavedArticles();
 
   const formattedDate = new Date(article.publishedAt).toLocaleDateString(
     "en-US",
@@ -32,6 +34,11 @@ const NewsCard = ({ article, isSaved }) => {
   );
 
   const handleBookmark = () => {
+    try {
+      saveCard(article);
+    } catch (error) {
+      console.error("Failed to save article:", error);
+    }
     setIsBookmarked(!isBookmarked);
 
     if (!isBookmarked) {
@@ -55,6 +62,10 @@ const NewsCard = ({ article, isSaved }) => {
     setIsTrashHovered(false);
   };
 
+  const handleDelete = () => {
+    deleteArticle(article.id);
+  };
+
   return (
     <div className="card__content">
       <li className="news__card">
@@ -63,6 +74,7 @@ const NewsCard = ({ article, isSaved }) => {
             onMouseEnter={handleTrashMouseEnter}
             onMouseLeave={handleTrashMouseLeave}
             className="news__card-btn news-card__trash"
+            onClick={handleDelete}
           >
             <img
               className="news-card-icon trash__icon"
@@ -100,7 +112,11 @@ const NewsCard = ({ article, isSaved }) => {
             )}
           </button>
         )}
-        <img className="card__img" src={article.urlToImage} alt="news image" />
+        <img
+          className="card__img"
+          src={article.urlToImage}
+          alt={article.title}
+        />
         <section className="card__info">
           <p className="card__date">{formattedDate}</p>
           <h2 className="card__title">{article.title}</h2>

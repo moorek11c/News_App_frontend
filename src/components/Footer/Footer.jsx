@@ -4,7 +4,7 @@ import fbLogo from "../../Assets/fbLogo.svg";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer__container">
         <p className="footer__info">© 2020 Supersite, Powered by News API</p>
         <div className="footer__links">
@@ -19,7 +19,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

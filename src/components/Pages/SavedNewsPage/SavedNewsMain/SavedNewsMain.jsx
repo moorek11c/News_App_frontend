@@ -1,6 +1,6 @@
 import "./SavedNewsMain.css";
 import { useContext } from "react";
-import SavedArticlesContext from "../Contexts/SavedArticlesContext";
+import SavedArticlesContext from "../../../Contexts/SavedArticlesContext";
 
 function SavedNewsMain() {
   const { savedArticles } = useContext(SavedArticlesContext);
