@@ -36,31 +36,54 @@ const getNews = async (query) => {
   }
 };
 
-const saveCard = (card) => {
+const saveCard = async (article) => {
   try {
-    const response = fetch("http://localhost:3001/cards", {
+    const response = await fetch("http://localhost:3001/cards", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(card),
+      body: JSON.stringify(article),
     });
-    return response;
-  } catch (error) {
-    console.error("Error message:", error.message);
-    throw error;
-  }
-};
 
-const getSavedCards = async () => {
-  try {
-    const response = await fetch("http://localhost:3001/cards");
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Error response data:", errorData);
+      console.error("Error response status:", response.status);
+      console.error("Error response headers:", response.headers);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error message:", error.message);
+    console.error("Failed to save article:", error);
     throw error;
   }
 };
 
-export { getNews, saveCard, getSavedCards };
+const getSavedArticles = async () => {
+  try {
+    const response = await fetch("http://localhost:3001/cards");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+
+    // Extract the nested article object
+    const articles = data.map((item) => ({
+      id: item.id,
+      ...item.article,
+      source: item.article.source,
+      isSaved: item.isSaved,
+      query: item.query,
+    }));
+
+    return articles;
+  } catch (error) {
+    console.error("Error fetching saved articles:", error);
+    return [];
+  }
+};
+
+export { getNews, saveCard, getSavedArticles };

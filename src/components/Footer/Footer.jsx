@@ -14,8 +14,24 @@ function Footer() {
           </div>
 
           <div className="footer__links_social">
-            <img className="footer__link_social" src={ghLogo} alt="Git Hub" />
-            <img className="footer__link_social" src={fbLogo} alt="Facebook" />
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className="footer__link_social" src={ghLogo} alt="GitHub" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="footer__link_social"
+                src={fbLogo}
+                alt="Facebook"
+              />
+            </a>
           </div>
         </div>
       </div>

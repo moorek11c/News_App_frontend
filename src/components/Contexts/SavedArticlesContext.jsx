@@ -1,5 +1,5 @@
-import { createContext, useState, useContext } from "react";
-import { UseSearchContext } from "./SearchContext";
+import { createContext, useState, useContext, useEffect } from "react";
+import { getSavedArticles } from "../../utils/API/NewsApi";
 
 const SavedArticlesContext = createContext();
 
@@ -7,22 +7,45 @@ export const UseSavedArticles = () => useContext(SavedArticlesContext);
 
 export const SavedArticlesProvider = ({ children }) => {
   const [savedArticles, setSavedArticles] = useState([]);
-  const { query } = UseSearchContext();
 
-  const saveArticle = (article) => {
-    setSavedArticles((prevArticles) => {
-      // Check if the article already exists
-      if (
-        prevArticles.some((savedArticle) => savedArticle.url === article.url)
-      ) {
-        return prevArticles; // Return the existing list if the article is already saved
+  useEffect(() => {
+    const fetchSavedArticles = async () => {
+      try {
+        const data = await getSavedArticles();
+        const filteredData = data.map((article) => ({
+          id: article.id,
+          title: article.title,
+          description: article.description,
+          urlToImage: article.urlToImage,
+          publishedAt: article.publishedAt,
+          source: article.source.name,
+          query: article.query,
+        }));
+
+        setSavedArticles(filteredData);
+      } catch (error) {
+        console.error("Error fetching saved articles:", error);
       }
-      return [{ ...article, query }, ...prevArticles]; // Add the new article
-    });
+    };
+
+    fetchSavedArticles();
+  }, []);
+
+  const deleteArticle = async (articleId) => {
+    try {
+      await fetch(`http://localhost:3001/cards/${articleId}`, {
+        method: "DELETE",
+      });
+      setSavedArticles((prevArticles) =>
+        prevArticles.filter((savedArticle) => savedArticle.id !== articleId)
+      );
+    } catch (error) {
+      console.error("Error deleting article:", error);
+    }
   };
 
   return (
-    <SavedArticlesContext.Provider value={{ savedArticles, saveArticle }}>
+    <SavedArticlesContext.Provider value={{ savedArticles, deleteArticle }}>
       {children}
     </SavedArticlesContext.Provider>
   );

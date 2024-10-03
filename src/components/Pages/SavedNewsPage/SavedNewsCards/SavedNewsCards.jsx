@@ -2,21 +2,21 @@ import "./SavedNewsCards.css";
 import { useContext } from "react";
 import { SearchContext } from "../../../Contexts/SearchContext";
 import NewsCard from "../../../NewsCardList/NewsCard/NewsCard";
-import SavedArticlesContext from "../../../Contexts/SavedArticlesContext";
+import { UseSavedArticles } from "../../../Contexts/SavedArticlesContext";
 
 function SavedNewsCards() {
-  const { savedArticles } = useContext(SavedArticlesContext);
+  const { savedArticles } = UseSavedArticles();
   const { query } = useContext(SearchContext);
 
   return (
     <div className="saved-cards__page">
       <ul className="saved-cards__list">
-        {savedArticles.map((article, index) => (
+        {savedArticles.map((article) => (
           <NewsCard
-            key={index}
+            key={article.id}
+            query={query}
             article={article}
             isSaved={true}
-            query={query}
           />
         ))}
       </ul>
