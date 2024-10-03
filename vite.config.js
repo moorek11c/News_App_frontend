@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [react()],
   base: "/News_App_frontend/",
+  plugins: [react()],
   server: {
     port: 3000,
   },
