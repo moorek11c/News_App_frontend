@@ -1,5 +1,7 @@
 # News App Frontend
 
+[link to the deployed site](https://moorek11c.github.io/News_App_frontend/)
+
 This is a React-based News App that allows users to sign up, sign in, and save articles to a separate saved-news page. The app uses a mock server with `db.json` for data storage and Vite for the project setup and build process.
 
 ## Features
