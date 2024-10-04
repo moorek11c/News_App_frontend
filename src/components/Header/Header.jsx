@@ -10,9 +10,9 @@ import headerLogoDark from "../../Assets/NewsExplorerdark.svg";
 const Header = ({ isSavedNewsPage }) => {
   return (
     <header
-      className={isSavedNewsPage ? "header header__saved-news" : "header"}
+      className={isSavedNewsPage ? "header header--saved-news" : "header"}
     >
-      <NavLink className="logo__home-link" to="/">
+      <NavLink className="header__home-link" to="/">
         <img
           className="header__logo"
           src={isSavedNewsPage ? headerLogoDark : headerLogo}

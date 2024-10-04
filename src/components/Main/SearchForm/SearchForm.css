@@ -1,9 +1,14 @@
+.search__section {
+  max-width: 1440px;
+
+  display: flex;
+  justify-content: center;
+}
+
 .search__form {
   width: 608px;
   font-family: "Roboto Medium", "Inter Medium", sans-serif;
   position: relative;
-  margin-bottom: 80px;
-  margin: 0 auto;
 }
 
 .search__input {
@@ -60,14 +65,14 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 564px) {
   .search__form {
     width: 288px;
     height: 128px;
     display: block;
   }
 
-  .search__form-container {
+  .search__section {
     margin-bottom: 32px;
   }
 

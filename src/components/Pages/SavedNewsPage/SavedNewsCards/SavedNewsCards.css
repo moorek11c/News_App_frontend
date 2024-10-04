@@ -1,8 +1,8 @@
-.saved-cards__page {
+.saved-news-cards__page {
   background-color: rgba(245, 246, 247, 1);
 }
 
-.saved-cards__list {
+.saved-news-cards__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -10,8 +10,9 @@
   gap: 16px;
   padding-top: 80px;
 }
+
 @media screen and (max-width: 768px) {
-  .saved-cards__list {
+  .saved-news-cards__list {
     padding-top: 32px;
     margin: 0;
     gap: 8px;

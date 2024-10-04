@@ -9,8 +9,8 @@ function SavedNewsCards() {
   const { query } = useContext(SearchContext);
 
   return (
-    <div className="saved-cards__page">
-      <ul className="saved-cards__list">
+    <div className="saved-news-cards__page">
+      <ul className="saved-news-cards__list">
         {savedArticles.map((article) => (
           <NewsCard
             key={article.id}

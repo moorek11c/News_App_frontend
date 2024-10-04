@@ -29,16 +29,18 @@ const NewsCardList = () => {
   const isMoreToShow = visibleArticles < articles.length;
 
   return (
-    <div className="news__cards-container">
-      <h2 className="search__container-title">Search results</h2>
-      <div className="news__card-list">
+    <div className="news-card-list">
+      <h2 className="news-card-list__title">Search results</h2>
+      <ul className="news-card-list__cards">
         {visibleArticleList.map((article, index) => (
-          <NewsCard key={index} article={article} />
+          <li key={index} className="news-card-list__item">
+            <NewsCard article={article} />
+          </li>
         ))}
-      </div>
+      </ul>
       {isMoreToShow && (
-        <div className="button__container">
-          <button className="button__show-more" onClick={handleShowMore}>
+        <div className="news-card-list__button-container">
+          <button className="news-card-list__button" onClick={handleShowMore}>
             Show More
           </button>
         </div>

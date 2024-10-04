@@ -6,7 +6,7 @@ import SavedNewsCards from "./SavedNewsCards/SavedNewsCards";
 function SavedNewsPage() {
   return (
     <>
-      <div className="saved-news__container">
+      <div className="saved-news-page__container">
         <Header isSavedNewsPage={true} />
       </div>
       <SavedNewsMain />

@@ -3,23 +3,16 @@ import { useState, useContext } from "react";
 import { SearchContext } from "../../Contexts/SearchContext";
 
 const SearchForm = ({ onSearch }) => {
-  // State to store the search query
-
   const [query, setQuery] = useState("");
   const [error, setError] = useState("");
 
-  // Destructure the handleSearch function from the SearchContext
-
   const { handleSearch } = useContext(SearchContext);
-
-  // Function to handle the input change
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
   // function to check if the search query is empty
-
   const checkQuery = () => {
     if (query.trim() === "") {
       setError("Please enter a keyword!");
@@ -29,7 +22,6 @@ const SearchForm = ({ onSearch }) => {
   };
 
   // Function to handle the form submission
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -41,7 +33,7 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <div className="search__form-container">
+    <section className="search__section">
       <form onSubmit={handleSubmit} className="search__form">
         <div className="search__form-contents">
           <input
@@ -54,7 +46,7 @@ const SearchForm = ({ onSearch }) => {
           <button className="search__button">Search</button>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 

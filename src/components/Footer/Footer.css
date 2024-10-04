@@ -1,78 +1,95 @@
 .footer {
   height: 80px;
+  max-width: 1440px;
+  width: 100%;
   font-family: "Roboto Regular", "Inter", sans-serif;
   line-height: 24px;
-}
-
-.footer__container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__info {
+  display: block;
   color: rgba(182, 188, 191, 1);
   font-size: 16px;
   margin-right: auto;
+  margin-left: 104px;
 }
 
-.footer__links-type-page {
+.footer__nav {
   display: flex;
 }
 
 .footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.footer__link {
+.footer__links--social {
+  display: flex;
+}
+
+.footer__links-item {
   margin-right: 40px;
 }
 
-/* .footer__links_social {
-TODO: Link Them
-} */
+.footer__link {
+  color: black;
+  text-decoration: none;
+}
 
-.footer__link_social {
+.footer__link-social {
   margin-right: 24px;
 }
 
-@media screen and (max-width: 320px) {
-  .footer__container {
-    margin: 0;
-    padding: 20px 16px 22px;
-    height: 176px;
+.footer__link-social img {
+  width: 24px;
+  height: 24px;
+}
 
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .footer__links {
-    margin: 0;
-    justify-content: space-between;
-    align-items: first baseline;
-  }
-  .footer__links-type-page {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer__link-home {
-    padding-bottom: 26px;
-  }
-
-  .footer__link_social {
-    margin: 0;
-    margin-left: 26px;
+@media screen and (max-width: 768px) {
+  .about__description {
+    height: 168px;
+    width: 424px;
   }
 
   .footer__info {
-    width: 288px;
-    height: 22px;
-    margin: 0;
-    margin-top: 38px;
-    align-items: flex-end;
+    margin-left: 40px;
   }
 
-  .footer__link {
-    margin: 0;
+  .footer__links-item {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .footer__links {
+    flex-direction: column;
+  }
+
+  .footer__links--social {
+    flex-direction: row;
+  }
+
+  .footer__links {
+    width: 320px;
+    height: 176px;
+  }
+
+  .footer__info {
+    max-width: 288px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

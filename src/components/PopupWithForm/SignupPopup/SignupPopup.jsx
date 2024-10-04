@@ -8,9 +8,9 @@ import { signupValidationSchema } from "../Validation/ValidationSchemas";
 import { UserContext } from "../../Contexts/UserContext";
 
 function SignupPopup() {
-  const { open: openSignIn } = usePopup("SignInPopup");
+  const { open: openSignIn } = usePopup("signin");
 
-  const { open: openConfirmation } = usePopup("ConfirmationPopup");
+  const { open: openConfirmation } = usePopup("confirmation");
 
   const { handleSignUp } = useContext(UserContext);
 
@@ -36,16 +36,13 @@ function SignupPopup() {
   return (
     <PopupWithForm
       onSubmit={formik.handleSubmit}
-      popupName="SignUpPopup"
+      popupName="signup"
       title="Sign up"
       buttonText="Sign up"
     >
       <div className="sign-up__form">
         <p className="input__name">Email</p>
-        <label
-          htmlFor="email-signup"
-          className="popup__label popup__label-type-email"
-        >
+        <label htmlFor="email-signup" className="popup__label--email">
           <input
             type="email"
             name="email"
@@ -64,10 +61,7 @@ function SignupPopup() {
         </label>
 
         <p className="input__name">Password</p>
-        <label
-          htmlFor="password-signup"
-          className="popup__label popup__label-type-password"
-        >
+        <label htmlFor="password-signup" className="popup__label--password">
           <input
             type="password"
             name="password"
@@ -88,10 +82,7 @@ function SignupPopup() {
         </label>
 
         <p className="input__name">Username</p>
-        <label
-          htmlFor="username-signup"
-          className="popup__label popup__label-type-username"
-        >
+        <label htmlFor="username-signup" className="popup__label--username">
           <input
             type="name"
             id="username-signup"
@@ -112,7 +103,7 @@ function SignupPopup() {
         </label>
 
         <button className="signin__btn" onClick={openSignIn}>
-          or <span className="span__class-sign-up">sign in</span>
+          or <span className="signup__signin-btn">sign in</span>
         </button>
       </div>
     </PopupWithForm>

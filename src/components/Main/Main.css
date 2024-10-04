@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
-  width: 100%;
   font-family: "Roboto Regular", sans-serif, serif;
   font-size: 18px;
   line-height: 24px;
@@ -45,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 445px) {
   .main__title {
     margin: 30px 16px 16px;
     width: 285px;

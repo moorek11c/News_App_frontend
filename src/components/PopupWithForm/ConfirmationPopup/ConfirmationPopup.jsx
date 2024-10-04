@@ -10,7 +10,7 @@ function ConfirmationPopup() {
       <PopupWithForm
         onSubmit={openSignIn}
         buttonText="Sign in"
-        popupName="ConfirmationPopup"
+        popupName="confirmation"
       >
         <div className="popup__confirmation">
           <h2 className="popup__confirmation-title">

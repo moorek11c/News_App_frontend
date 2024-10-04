@@ -5,22 +5,17 @@
   font-family: "Inter Regular", sans-serif, serif;
 }
 
-.popup__label-type-email {
-  margin-bottom: 31px;
-  padding: 0;
-}
-
-.popup__label-type-password {
+.popup__label--password {
   margin-bottom: 31px;
   padding: 0;
 }
 
 .popup__input {
-  /* fonts */
-  font-size: 12px;
-  line-height: 14.52px;
-  font-family: "Inter Regular", sans-serif, serif;
   margin: 0;
+  padding: 0;
+}
+.popup__label--email {
+  margin-bottom: 31px;
   padding: 0;
 }
 .input__name {
@@ -31,9 +26,29 @@
   color: rgba(47, 113, 229, 1);
 }
 
-.popup__label-type-email-username {
+.popup__submit-btn--signup {
+  width: 358px;
+  height: 64px;
+  margin-left: 35px;
+
+  border: none;
+  border-radius: 50px;
+
+  background-color: rgba(47, 113, 229, 1);
+  color: rgb(255, 255, 255);
+
+  font-family: "Roboto Medium", "Inter", sans-serif;
+
+  cursor: pointer;
+}
+
+.popup__label-username {
   margin: 0;
   padding: 0;
+}
+
+.signup__signin-btn {
+  color: rgba(47, 113, 229, 1);
 }
 
 .popup__input_username {

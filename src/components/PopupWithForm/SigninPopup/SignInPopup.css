@@ -8,16 +8,14 @@
   font-family: "Inter Regular", sans-serif, serif;
 }
 
-.popup__label-type-email {
-  /* position */
-  margin-bottom: 31px;
-}
-
-.popup__label-type-password {
+.popup__label--password {
   /* position */
   margin-bottom: 39px;
 }
-
+.popup__label--email {
+  margin-bottom: 31px;
+  padding: 0;
+}
 .popup__input {
   /* fonts */
   font-size: 12px;
@@ -35,24 +33,23 @@
   color: rgba(47, 113, 229, 1);
 }
 
-.popup__submit-btn {
-  /* position/size */
+.popup__submit-btn--signin {
   width: 358px;
   height: 64px;
   margin-left: 35px;
-  /* border */
+
   border: none;
   border-radius: 50px;
-  /* color */
+
   background-color: rgba(47, 113, 229, 1);
   color: rgb(255, 255, 255);
-  /* font */
+
   font-family: "Roboto Medium", "Inter", sans-serif;
-  /* cursor */
+
   cursor: pointer;
 }
-/* TODO Fix this below */
-.span__class-sign-up {
+
+.signin__signup-btn {
   color: rgba(47, 113, 229, 1);
 }
 
@@ -71,7 +68,7 @@
     margin-left: 16px;
   }
 
-  .popup__submit-btn {
+  .popup__submit-btn--signin {
     width: 288px;
     height: 64px;
     margin-left: 20px;

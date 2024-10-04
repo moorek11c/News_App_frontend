@@ -42,11 +42,11 @@
   border-radius: 20px;
 }
 
-.popup__container_SignUpPopup {
+.popup__container--signup {
   height: 458px;
 }
 
-.popup__container_ConfirmationPopup {
+.popup__container--confirmation {
   height: 182px;
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@
     bottom: 95px;
   }
 
-  .popup__container_ConfirmationPopup {
+  .popup__container--confirmation {
     height: 536px;
     margin: 0;
     padding: 0;
@@ -85,6 +85,9 @@
 
   .popup__input {
     width: 288px;
+    font-size: 12px;
+    line-height: 14.52px;
+    font-family: "Inter Regular", sans-serif, serif;
   }
 
   .popup__close {
@@ -99,7 +102,7 @@
     top: -108px;
     left: 274px;
   }
-  .popup__container_ConfirmationPopup .popup__close-btn {
+  .popup__container--confirmation .popup__close-btn {
     top: -80px;
     left: 274px;
   }

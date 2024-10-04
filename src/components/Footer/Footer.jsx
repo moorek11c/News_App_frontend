@@ -5,44 +5,48 @@ import fbLogo from "../../Assets/fbLogo.svg";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__container">
-        <p className="footer__info">© 2024 Supersite, Powered by News API</p>
-        <div className="footer__links">
-          <div className="footer__links-type-page">
-            <a href="/" className="footer__link footer__link-home">
-              <p className="footer__link footer__link-home">Home</p>
+      <p className="footer__info">© 2024 Supersite, Powered by News API</p>
+      <nav className="footer__nav">
+        <ul className="footer__links">
+          <li className="footer__links-item">
+            <a href="/" className="footer__link footer__link--home">
+              Home
             </a>
+          </li>
+          <li className="footer__links-item">
             <a
               href="https://tripleten.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="footer__link footer__link--tripleten"
             >
-              <p className="footer__link footer__link-tripleten">TripleTen</p>
+              TripleTen
             </a>
-          </div>
-
-          <div className="footer__links_social">
+          </li>
+        </ul>
+        <ul className="footer__links footer__links--social">
+          <li className="footer__links-item">
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="footer__link footer__link--social"
             >
-              <img className="footer__link_social" src={ghLogo} alt="GitHub" />
+              <img src={ghLogo} alt="GitHub" />
             </a>
+          </li>
+          <li className="footer__links-item">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="footer__link footer__link--social"
             >
-              <img
-                className="footer__link_social"
-                src={fbLogo}
-                alt="Facebook"
-              />
+              <img src={fbLogo} alt="Facebook" />
             </a>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </nav>
     </footer>
   );
 }

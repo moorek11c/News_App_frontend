@@ -10,7 +10,7 @@ function PopupWithForm({ popupName, title, children, buttonText, onSubmit }) {
 
   return (
     <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
-      <div className={`popup__container popup__container_${popupName}`}>
+      <div className={`popup__container popup__container--${popupName}`}>
         <h2 className="popup__title">{title}</h2>
         <button className="popup__close-btn">
           <img
@@ -22,10 +22,7 @@ function PopupWithForm({ popupName, title, children, buttonText, onSubmit }) {
         </button>
         <form noValidate onSubmit={onSubmit} className="popup__form">
           {children}
-          <button
-            type="submit"
-            className={`popup__submit-btn popup__submit-btn_${popupName}`}
-          >
+          <button type="submit" className={`popup__submit-btn--${popupName}`}>
             {buttonText}
           </button>
         </form>

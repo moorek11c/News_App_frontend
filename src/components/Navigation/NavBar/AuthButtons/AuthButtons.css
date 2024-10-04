@@ -1,0 +1,36 @@
+.authButton__sign-in {
+  height: 48px;
+  width: 176px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 42px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.authButton__sign-out {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.authButton__username {
+  margin-right: 10px;
+}
+
+.authButton__icon {
+  width: 20px;
+  height: 20px;
+}

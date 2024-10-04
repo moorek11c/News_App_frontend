@@ -1,4 +1,4 @@
-.card__content {
+.news-card__content {
   position: relative;
   font-family: "Roboto Regular", sans-serif, "Arial";
   display: flex;
@@ -12,17 +12,17 @@
   margin: 0;
 }
 
-.news__card {
+.news-card {
   list-style: none;
   height: 576px;
   width: 400px;
 }
 
-.card__info {
+.news-card__info {
   padding: 0 24px;
 }
 
-.card__date {
+.news-card__date {
   font-size: 18px;
   line-height: 24px;
   margin-top: 20px;
@@ -31,18 +31,17 @@
   color: rgba(182, 188, 191, 1);
 }
 
-.card__img {
+.news-card__img {
   width: 400px;
   height: 272px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   object-fit: cover;
-
   object-position: center;
   padding: 0;
 }
 
-.card__title {
+.news-card__title {
   font-family: "Roboto Slab Regular", sans-serif, "Arial";
   font-size: 24px;
   line-height: 32px;
@@ -55,7 +54,7 @@
   padding: 0;
 }
 
-.card__description {
+.news-card__description {
   display: flex;
   font-size: 16px;
   line-height: 22px;
@@ -68,7 +67,7 @@
   white-space: wrap;
 }
 
-.card__source {
+.news-card__source {
   font-family: "Roboto Slab Regular", sans-serif, "Arial";
   color: rgba(182, 188, 191, 1);
   font-size: 16px;
@@ -79,7 +78,7 @@
   padding: 0;
 }
 
-.news__card-btn {
+.news-card__btn {
   position: absolute;
   right: 24px;
   top: 24px;
@@ -90,12 +89,12 @@
   cursor: pointer;
 }
 
-.bookmark__icon {
+.news-card__bookmark-icon {
   display: flex;
   margin: 0 auto;
 }
 
-.hover__tip {
+.news-card__hover-tip {
   position: absolute;
   align-content: center;
   top: 0;
@@ -108,13 +107,13 @@
   padding: 0;
 }
 
-.hover__tip-trash {
+.news-card__hover-tip--trash {
   position: absolute;
   top: 0;
   right: 45px;
 }
 
-.hover__tip-text {
+.news-card__hover-tip-text {
   font-family: "Roboto Medium", sans-serif, "Arial";
   font-size: 12px;
   line-height: 14.06px;
@@ -124,7 +123,7 @@
   margin: 0;
 }
 
-.card__keyword {
+.news-card__keyword {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,92 +137,92 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card__content {
+  .news-card__content {
     width: 224px;
     height: 420px;
   }
 
-  .card__title {
+  .news-card__title {
     font-size: 22px;
     margin-bottom: 10px;
   }
-  .news__card {
+  .news-card {
     width: 224px;
     height: 420px;
   }
-  .card__img {
+  .news-card__img {
     width: 224px;
     height: 150px;
   }
 
-  .card__info {
+  .news-card__info {
     padding: 0 16px;
   }
-  .card__date {
+  .news-card__date {
     margin-top: 16px;
   }
-  .card__source {
+  .news-card__source {
     margin-top: 12px;
     margin-bottom: 16px;
   }
-  .card__description {
+  .news-card__description {
     height: 88px;
     width: 192px;
   }
-  .news__card-btn {
+  .news-card__btn {
     right: 8px;
     top: 8px;
   }
-  .hover__tip {
+  .news-card__hover-tip {
     width: 160px;
     left: -170px;
   }
-  .card__keyword {
+  .news-card__keyword {
     left: 8px;
     top: 8px;
   }
+}
 
-  @media screen and (max-width: 320px) {
-    .card__content {
-      width: 288px;
-      height: 440px;
-    }
+@media screen and (max-width: 320px) {
+  .news-card__content {
+    width: 288px;
+    height: 440px;
+  }
 
-    .card__title {
-      font-size: 22px;
-      height: 48px;
-      margin-bottom: 10px;
-      line-height: 24px;
-      text-overflow: ellipsis;
-    }
-    .news__card {
-      width: 288px;
-      height: 440px;
-    }
-    .card__img {
-      width: 288px;
-      height: 196px;
-    }
+  .news-card__title {
+    font-size: 22px;
+    height: 48px;
+    margin-bottom: 10px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+  }
+  .news-card {
+    width: 288px;
+    height: 440px;
+  }
+  .news-card__img {
+    width: 288px;
+    height: 196px;
+  }
 
-    .card__info {
-      padding: 0 16px;
-    }
-    .card__date {
-      margin-top: 16px;
-    }
+  .news-card__info {
+    padding: 0 16px;
+  }
+  .news-card__date {
+    margin-top: 16px;
+  }
 
-    .card__description {
-      height: 88px;
-      width: 256px;
-    }
+  .news-card__description {
+    height: 88px;
+    width: 256px;
+  }
 
-    .hover__tip {
-      width: 160px;
-      left: -170px;
-    }
-    .card__keyword {
-      left: 8px;
-      top: 8px;
-    }
+  .news-card__hover-tip {
+    width: 160px;
+    left: -170px;
+  }
+  .news-card__keyword {
+    left: 8px;
+    top: 8px;
   }
 }
