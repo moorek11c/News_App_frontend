@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { NavLink } from "react-router-dom";
 import ghLogo from "../../Assets/GitHub.svg";
 import fbLogo from "../../Assets/fbLogo.svg";
 
@@ -9,9 +10,13 @@ function Footer() {
       <nav className="footer__nav">
         <ul className="footer__links">
           <li className="footer__links-item">
-            <a href="/" className="footer__link footer__link--home">
+            <NavLink
+              to="/"
+              className="footer__link footer__link--home"
+              activeClassName="footer__link--active"
+            >
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="footer__links-item">
             <a
