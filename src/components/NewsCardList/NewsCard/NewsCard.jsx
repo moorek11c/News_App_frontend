@@ -62,7 +62,7 @@ const NewsCard = ({ article, isSaved }) => {
             {article.description || "No description"}
           </p>
           <p className="news-card__source">
-            {article.source?.name || "Unknown source"}
+            {article.source || "Unknown source"}
           </p>
           {article.query && (
             <p className="news-card__keyword">{article.query}</p>

@@ -2,6 +2,7 @@ import "./SavedNewsPage.css";
 import Header from "../../Header/Header";
 import SavedNewsMain from "./SavedNewsMain/SavedNewsMain";
 import SavedNewsCards from "./SavedNewsCards/SavedNewsCards";
+import Footer from "../../Footer/Footer";
 
 function SavedNewsPage() {
   return (
@@ -11,6 +12,7 @@ function SavedNewsPage() {
       </div>
       <SavedNewsMain />
       <SavedNewsCards />
+      <Footer />
     </>
   );
 }

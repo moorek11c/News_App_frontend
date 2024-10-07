@@ -15,7 +15,7 @@ const TrashButton = ({ isTrashHovered, handleDelete, handleHoverState }) => (
     />
     {isTrashHovered && (
       <div className="news-card__hover-tip news-card__hover-tip--trash">
-        <p className="news-card__hover-tip-text">Removed from save</p>
+        <p className="news-card__hover-tip-text">Remove from save</p>
       </div>
     )}
   </button>
