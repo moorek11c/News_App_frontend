@@ -82,6 +82,7 @@
 
   .about__content {
     margin: 0;
+    text-align: left;
   }
 
   .about__title {
@@ -90,8 +91,7 @@
   }
 
   .about__description {
-    max-width: 424px;
-    width: 100%;
+    max-width: 400px;
   }
 
   .about__img {

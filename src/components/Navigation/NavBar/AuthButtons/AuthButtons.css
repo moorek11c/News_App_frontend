@@ -24,6 +24,7 @@
   border: 1px solid rgb(255, 255, 255);
   background-color: transparent;
   cursor: pointer;
+  margin-left: 64px;
 }
 
 .authButton__username {
@@ -33,4 +34,28 @@
 .authButton__icon {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .authButton__sign-in {
+    width: 152px;
+    height: 40px;
+    margin-left: 16px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .authButton__sign-out {
+    margin-left: 20px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .mobile-menu--open .authButton__sign-out {
+    border-color: white;
+    width: 288px;
+    height: 56px;
+    margin: 0 auto;
+  }
 }

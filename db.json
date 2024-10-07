@@ -47,114 +47,42 @@
       "email": "ryan@mail.com",
       "password": "Bikes209!",
       "username": "Ryan",
-      "isLoggedIn": true
+      "isLoggedIn": false
     }
   ],
   "cards": [
     {
-      "id": "3005",
+      "id": "ec04",
       "article": {
         "source": {
-          "id": "the-verge",
-          "name": "The Verge"
+          "id": "usa-today",
+          "name": "USA Today"
         },
-        "author": "Brandon Widder",
-        "title": "Suunto’s new bone conduction headphones are up to $30 off right now",
-        "description": "The Suunto Sonic and Suunto Wing are both on sale for the first time, with the former going for just $129. You can also save on 8BitDo’s latest Retro Mechanical Keyboard.",
-        "url": "https://www.theverge.com/2024/9/25/24253447/suunto-wing-sonic-bone-conduction-headphones-ue-wonderboom-4-speaker-deal-sale",
-        "urlToImage": "https://cdn.vox-cdn.com/thumbor/sBER3F_-Yp3XKNcMhqE9BHgBs1s=/0x0:2700x1800/1200x628/filters:focal(1350x900:1351x901)/cdn.vox-cdn.com/uploads/chorus_asset/file/25477576/247124_Suunto_Wing___Sonic_AKrales_0280.jpg",
-        "publishedAt": "2024-09-25T19:54:07Z",
-        "content": "Suuntos new bone conduction headphones are up to $30 off right now\r\nSuuntos new bone conduction headphones are up to $30 off right now\r\n / You can also save on 8BitDos IBM-inspired Retro Mechanical K… [+3363 chars]"
+        "author": "Bailey Gallion",
+        "title": "'It could be anything': Police dig at Columbus home after woman's backyard discovery goes viral",
+        "description": "Columbus resident Katie Santry found what appears to be a rug buried in her backyard. Now she's gone viral, and Columbus police sent cadaver dogs.",
+        "url": "https://www.usatoday.com/story/news/nation/2024/10/04/rug-buried-columbus-ohio-katie-santry/75512592007/",
+        "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/04/NCOD/75511814007-media-2.jpg?crop=1279,721,x0,y119&width=1279&height=721&format=pjpg&auto=webp",
+        "publishedAt": "2024-10-04T15:12:24+00:00",
+        "content": "COLUMBUS, Ohio Police are investigating a strange finding buried in a backyard of a Columbus woman's home after her videos went viral on TikTok.\r\n\"It could be anything,\" Jennifer Watson, spokeswoman … [+2966 chars]"
       },
       "isSaved": true,
       "query": "dogs"
     },
     {
-      "id": "bd1b",
+      "id": "28a1",
       "article": {
         "source": {
-          "id": "the-verge",
-          "name": "The Verge"
-        },
-        "author": "Brandon Widder",
-        "title": "Suunto’s new bone conduction headphones are up to $30 off right now",
-        "description": "The Suunto Sonic and Suunto Wing are both on sale for the first time, with the former going for just $129. You can also save on 8BitDo’s latest Retro Mechanical Keyboard.",
-        "url": "https://www.theverge.com/2024/9/25/24253447/suunto-wing-sonic-bone-conduction-headphones-ue-wonderboom-4-speaker-deal-sale",
-        "urlToImage": "https://cdn.vox-cdn.com/thumbor/sBER3F_-Yp3XKNcMhqE9BHgBs1s=/0x0:2700x1800/1200x628/filters:focal(1350x900:1351x901)/cdn.vox-cdn.com/uploads/chorus_asset/file/25477576/247124_Suunto_Wing___Sonic_AKrales_0280.jpg",
-        "publishedAt": "2024-09-25T19:54:07Z",
-        "content": "Suuntos new bone conduction headphones are up to $30 off right now\r\nSuuntos new bone conduction headphones are up to $30 off right now\r\n / You can also save on 8BitDos IBM-inspired Retro Mechanical K… [+3363 chars]"
-      },
-      "isSaved": true,
-      "query": "dogs"
-    },
-    {
-      "id": "3e4b",
-      "article": {
-        "source": {
-          "id": "the-verge",
-          "name": "The Verge"
-        },
-        "author": "Brandon Widder",
-        "title": "Suunto’s new bone conduction headphones are up to $30 off right now",
-        "description": "The Suunto Sonic and Suunto Wing are both on sale for the first time, with the former going for just $129. You can also save on 8BitDo’s latest Retro Mechanical Keyboard.",
-        "url": "https://www.theverge.com/2024/9/25/24253447/suunto-wing-sonic-bone-conduction-headphones-ue-wonderboom-4-speaker-deal-sale",
-        "urlToImage": "https://cdn.vox-cdn.com/thumbor/sBER3F_-Yp3XKNcMhqE9BHgBs1s=/0x0:2700x1800/1200x628/filters:focal(1350x900:1351x901)/cdn.vox-cdn.com/uploads/chorus_asset/file/25477576/247124_Suunto_Wing___Sonic_AKrales_0280.jpg",
-        "publishedAt": "2024-09-25T19:54:07Z",
-        "content": "Suuntos new bone conduction headphones are up to $30 off right now\r\nSuuntos new bone conduction headphones are up to $30 off right now\r\n / You can also save on 8BitDos IBM-inspired Retro Mechanical K… [+3363 chars]"
-      },
-      "isSaved": true,
-      "query": "dogs"
-    },
-    {
-      "id": "e112",
-      "article": {
-        "source": {
-          "id": null,
-          "name": "BBC News"
+          "id": "politico",
+          "name": "Politico"
         },
         "author": null,
-        "title": "Horse who led Queen's coffin given ‘OBE for animals'",
-        "description": "Military horse Yogi is said to have provided \"unique emotional support\" to his riders throughout his career.",
-        "url": "https://www.bbc.com/news/articles/c1k7w9mppw3o",
-        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/708a/live/3ad6ea10-80af-11ef-83dd-fbf1b9732cf0.jpg",
-        "publishedAt": "2024-10-02T11:16:41Z",
-        "content": "A horse who led the procession of the Queen's coffin from Buckingham Palace to Westminster Hall has been awarded the \"animals' OBE\".\r\nLord Firebrand, known as Yogi, was awarded the PDSA Order of Meri… [+1552 chars]"
-      },
-      "isSaved": true,
-      "query": "dogs"
-    },
-    {
-      "id": "1761",
-      "article": {
-        "source": {
-          "id": null,
-          "name": "BBC News"
-        },
-        "author": null,
-        "title": "Horse who led Queen's coffin given ‘OBE for animals'",
-        "description": "Military horse Yogi is said to have provided \"unique emotional support\" to his riders throughout his career.",
-        "url": "https://www.bbc.com/news/articles/c1k7w9mppw3o",
-        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/708a/live/3ad6ea10-80af-11ef-83dd-fbf1b9732cf0.jpg",
-        "publishedAt": "2024-10-02T11:16:41Z",
-        "content": "A horse who led the procession of the Queen's coffin from Buckingham Palace to Westminster Hall has been awarded the \"animals' OBE\".\r\nLord Firebrand, known as Yogi, was awarded the PDSA Order of Meri… [+1552 chars]"
-      },
-      "isSaved": true,
-      "query": "dogs"
-    },
-    {
-      "id": "690c",
-      "article": {
-        "source": {
-          "id": null,
-          "name": "BBC News"
-        },
-        "author": null,
-        "title": "Peta calls for police dogs to be phased out after riots",
-        "description": "The animal rights charity says unlike human officers they do not enlist.",
-        "url": "https://www.bbc.com/news/articles/ceqnyrr2gxno",
-        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/a94e/live/8fbf6d70-7e77-11ef-bda7-e1427314c99f.png",
-        "publishedAt": "2024-09-29T15:24:19Z",
-        "content": "Police dog Vixen suffered a gash to her head after the brick was thrown\r\nThe animal rights group Peta has called for the use of police dogs to be phased out after animals were hit with bricks and bur… [+2986 chars]"
+        "title": "Vance’s media strategy takes a turn",
+        "description": "He was Trump’s policy whisperer to key voting blocs. Now, he’s fueling rumors that Haitian immigrants in Ohio are eating cats and dogs.",
+        "url": "https://www.politico.com/news/2024/09/14/vance-trump-media-strategy-00179209",
+        "urlToImage": null,
+        "publishedAt": "2024-09-14T20:58:06+00:00",
+        "content": "He was Trump’s policy whisperer to key voting blocs. Now, he’s fueling rumors that Haitian immigrants in Ohio are eating cats and dogs."
       },
       "isSaved": true,
       "query": "dogs"

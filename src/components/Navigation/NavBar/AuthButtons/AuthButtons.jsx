@@ -8,8 +8,14 @@ const AuthButton = ({
   handleLogout,
   isSavedNewsPage,
   openSignIn,
+  isMobileMenu,
 }) => {
-  const icon = isSavedNewsPage ? logoutIconDark : logoutIconLight;
+  const icon = isMobileMenu
+    ? logoutIconLight
+    : isSavedNewsPage
+    ? logoutIconDark
+    : logoutIconLight;
+
   return isLoggedIn ? (
     <button
       onClick={handleLogout}

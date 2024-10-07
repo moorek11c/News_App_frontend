@@ -37,11 +37,13 @@ function NavBar({ isSavedNewsPage }) {
         <div className="navbar__desktop">
           <NavLinks isLoggedIn={isLoggedIn} />
           <AuthButton
+            isOpen={menuOpen}
             isLoggedIn={isLoggedIn}
             username={username}
             handleLogout={handleLogout}
             isSavedNewsPage={isSavedNewsPage}
             openSignIn={openSignIn}
+            isMobileMenu={false}
           />
         </div>
       </nav>

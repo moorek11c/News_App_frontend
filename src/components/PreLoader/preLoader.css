@@ -22,7 +22,7 @@
   }
 }
 
-.circle__preloader-container {
+.circle__preloader--container {
   background-color: rgba(245, 246, 247, 1);
   display: flex;
   justify-content: center;

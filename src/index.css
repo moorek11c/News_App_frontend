@@ -1,14 +1,6 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/Fonts/Fonts.css);
 
-#root {
-  background-image: url("./Assets//background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 576px;
-}
-
 .page {
   max-width: 1440px;
   min-width: 320px;

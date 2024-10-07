@@ -1,4 +1,10 @@
 import { createContext, useState, useEffect } from "react";
+import {
+  fetchUser,
+  loginUser,
+  logoutUser,
+  signUpUser,
+} from "../../utils/userService";
 
 export const UserContext = createContext();
 
@@ -7,10 +13,9 @@ export const UserProvider = ({ children }) => {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchUserData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/users");
-        const users = await response.json();
+        const users = await fetchUser();
         const user = users.find((user) => user.isLoggedIn);
         if (user) {
           setIsLoggedIn(true);
@@ -20,29 +25,14 @@ export const UserProvider = ({ children }) => {
         console.error("Error fetching user:", error);
       }
     };
-    fetchUser();
+    fetchUserData();
   }, []);
 
   const handleLogin = async ({ email, password }) => {
     try {
-      const response = await fetch("http://localhost:3001/users");
-      const users = await response.json();
-      const user = users.find(
-        (user) => user.email === email && user.password === password
-      );
-      if (user) {
-        setIsLoggedIn(true);
-        setUsername(user.username);
-        await fetch(`http://localhost:3001/users/${user.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ isLoggedIn: true }),
-        });
-      } else {
-        throw new Error("Invalid credentials");
-      }
+      const user = await loginUser({ email, password });
+      setIsLoggedIn(true);
+      setUsername(user.username);
     } catch (error) {
       console.error("Error logging in:", error);
       throw error;
@@ -51,20 +41,9 @@ export const UserProvider = ({ children }) => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:3001/users");
-      const users = await response.json();
-      const user = users.find((user) => user.isLoggedIn);
-      if (user) {
-        await fetch(`http://localhost:3001/users/${user.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ isLoggedIn: false }),
-        });
-        setIsLoggedIn(false);
-        setUsername("");
-      }
+      await logoutUser();
+      setIsLoggedIn(false);
+      setUsername("");
     } catch (error) {
       console.error("Error logging out:", error);
     }
@@ -72,15 +51,7 @@ export const UserProvider = ({ children }) => {
 
   const handleSignUp = async (user) => {
     try {
-      const newUser = { ...user, isLoggedIn: false };
-      const response = await fetch("http://localhost:3001/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      });
-      return response;
+      await signUpUser(user);
     } catch (error) {
       console.error("Error signing up:", error);
       throw error;

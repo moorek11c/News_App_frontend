@@ -36,6 +36,7 @@ const MobileMenu = ({
         handleLogout={handleLogout}
         isSavedNewsPage={isSavedNewsPage}
         openSignIn={openSignIn}
+        isMobileMenu={true}
       />
     </div>
   );

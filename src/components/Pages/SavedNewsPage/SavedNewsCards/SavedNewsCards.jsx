@@ -1,12 +1,18 @@
 import "./SavedNewsCards.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SearchContext } from "../../../Contexts/SearchContext";
 import NewsCard from "../../../NewsCardList/NewsCard/NewsCard";
-import { UseSavedArticles } from "../../../Contexts/SavedArticlesContext";
+import { getSavedArticles } from "../../../../utils/API/NewsApi";
 
 function SavedNewsCards() {
-  const { savedArticles } = UseSavedArticles();
+  const [savedArticles, setSavedArticles] = useState([]);
   const { query } = useContext(SearchContext);
+
+  useEffect(() => {
+    getSavedArticles().then((articles) => {
+      setSavedArticles(articles);
+    });
+  }, []);
 
   return (
     <div className="saved-news-cards__page">

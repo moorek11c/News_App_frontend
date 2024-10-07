@@ -24,7 +24,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <ul className="footer__links footer__links--social">
+        <ul className="footer__links--social">
           <li className="footer__links-item">
             <a
               href="https://github.com"

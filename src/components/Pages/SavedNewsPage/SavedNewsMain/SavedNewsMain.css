@@ -1,6 +1,7 @@
 .saved-news__main-content {
   font-family: "Roboto Regular", sans-serif, "Arial";
   padding: 40px 0 56px 104px;
+  background-color: white;
 }
 
 .saved-news__title {
@@ -24,7 +25,6 @@
 
   .saved-news__title {
     font-size: 14px;
-    width: 712px;
     height: 24px;
     display: flex;
     align-items: center;

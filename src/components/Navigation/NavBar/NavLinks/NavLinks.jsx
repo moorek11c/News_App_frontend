@@ -4,7 +4,7 @@ import "./NavLinks.css";
 const NavLinks = ({ isLoggedIn }) => {
   return (
     <ul className="navlinks__list">
-      <li className="navlinks__item">
+      <li className="navlinks__item navlinks__item--home">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -17,7 +17,7 @@ const NavLinks = ({ isLoggedIn }) => {
         </NavLink>
       </li>
       {isLoggedIn && (
-        <li className="navlinks__item">
+        <li className="navlinks__item navlinks__item--saved-news">
           <NavLink
             to="/saved-news"
             className={({ isActive }) =>

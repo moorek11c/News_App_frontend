@@ -1,7 +1,6 @@
 .navbar__container {
   display: flex;
   padding: 0;
-  margin-right: 104px;
   justify-items: right;
   align-items: center;
   font-family: "Roboto Medium", sans-serif, "Inter";
@@ -10,6 +9,7 @@
 .navbar__desktop {
   display: flex;
   align-items: center;
+  margin-right: 104px;
 }
 
 .navbar__hamburger-icon {
@@ -27,7 +27,7 @@
   color: black;
 }
 
-.navbar--saved-news .userauth__sign-out {
+.navbar--saved-news .authButton__sign-out {
   color: black;
   border-color: black;
 }
@@ -43,11 +43,6 @@
   left: -25px;
 }
 
-.mobile-menu {
-  display: none;
-  width: 100%; /* Ensure the mobile menu takes full width */
-}
-
 .mobile-menu--open {
   display: flex;
   flex-direction: column;
@@ -61,27 +56,36 @@
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-@media screen and (max-width: 768px) {
-  .navbar__hamburger-icon {
-    display: none;
-  }
-
+@media screen and (max-width: 829px) {
   .navbar__desktop {
     margin-right: 40px;
   }
+}
 
-  .navbar__container {
-    margin-right: 0;
+@media screen and (max-width: 552px) {
+  .navbar__desktop {
+    margin-right: 16px;
   }
 }
 
-@media screen and (max-width: 566px) {
+@media screen and (max-width: 690px) {
+  .navbar__desktop {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 509px) {
   .navbar__desktop {
     display: none;
   }
 
   .navbar__hamburger-icon {
-    display: flex; /* Show mobile menu on small screens */
+    display: flex;
     margin-right: 16px;
+  }
+
+  .navbar--saved-news .authButton__icon .authButton__sign-out {
+    color: white;
+    border-color: white;
   }
 }
