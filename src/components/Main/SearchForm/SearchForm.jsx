@@ -36,14 +36,18 @@ const SearchForm = ({ onSearch }) => {
     <section className="search__section">
       <form onSubmit={handleSubmit} className="search__form">
         <div className="search__form-contents">
-          <input
-            value={query}
-            onChange={handleInputChange}
-            placeholder={error || "Search..."}
-            className="search__input"
-            type="text"
-          />
-          <button className="search__button">Search</button>
+          <div className="search__input-wrapper">
+            <input
+              value={query}
+              onChange={handleInputChange}
+              placeholder={error || "Search..."}
+              className="search__input"
+              type="text"
+            />
+          </div>
+          <div className="search__button-wrapper">
+            <button className="search__button">Search</button>
+          </div>
         </div>
       </form>
     </section>

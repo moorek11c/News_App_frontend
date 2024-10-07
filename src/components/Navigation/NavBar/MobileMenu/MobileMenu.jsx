@@ -16,18 +16,22 @@ const MobileMenu = ({
   return (
     <div className={isOpen ? "mobile-menu mobile-menu--open" : "navbar"}>
       <div className="mobile-menu__header">
-        <img
-          className="mobile-menu__logo"
-          src={mobileLogo}
-          alt="NewsExplorer"
-        />
-        <button className="mobile-menu__close-btn" onClick={toggleMenu}>
+        <div className="mobile-menu__logo-wrapper">
           <img
-            className="mobile-menu__close-icon"
-            src={closeBtn}
-            alt="close button"
+            className="mobile-menu__logo"
+            src={mobileLogo}
+            alt="NewsExplorer"
           />
-        </button>
+        </div>
+        <div className="mobile-menu__close-btn-wrapper">
+          <button className="mobile-menu__close-btn" onClick={toggleMenu}>
+            <img
+              className="mobile-menu__close-icon"
+              src={closeBtn}
+              alt="close button"
+            />
+          </button>
+        </div>
       </div>
       <NavLinks isLoggedIn={isLoggedIn} />
       <AuthButton

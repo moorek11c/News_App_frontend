@@ -20,9 +20,11 @@ function NavBar({ isSavedNewsPage }) {
   return (
     <div className={isSavedNewsPage ? "navbar navbar--saved-news" : "navbar"}>
       <nav className="navbar__container">
-        <button className="navbar__hamburger-icon" onClick={toggleMenu}>
-          <img src={isSavedNewsPage ? menuDark : menuLight} alt="menu" />
-        </button>
+        <div className="navbar__hamburger">
+          <button className="navbar__hamburger-icon" onClick={toggleMenu}>
+            <img src={isSavedNewsPage ? menuDark : menuLight} alt="menu" />
+          </button>
+        </div>
         {menuOpen && (
           <MobileMenu
             isOpen={menuOpen}

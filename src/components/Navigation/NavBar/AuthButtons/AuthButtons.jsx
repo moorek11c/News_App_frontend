@@ -17,18 +17,26 @@ const AuthButton = ({
     : logoutIconLight;
 
   return isLoggedIn ? (
-    <button
-      onClick={handleLogout}
-      type="button"
-      className="authButton__sign-out"
-    >
-      <p className="authButton__username">{username}</p>
-      <img className="authButton__icon" src={icon} alt="logout" />
-    </button>
+    <div className="authButton__wrapper">
+      <button
+        onClick={handleLogout}
+        type="button"
+        className="authButton__sign-out"
+      >
+        <p className="authButton__username">{username}</p>
+        <img className="authButton__icon" src={icon} alt="logout" />
+      </button>
+    </div>
   ) : (
-    <button onClick={openSignIn} type="button" className="authButton__sign-in">
-      Sign In
-    </button>
+    <div className="authButton__wrapper">
+      <button
+        onClick={openSignIn}
+        type="button"
+        className="authButton__sign-in"
+      >
+        Sign In
+      </button>
+    </div>
   );
 };
 
