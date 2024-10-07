@@ -26,7 +26,6 @@ function SignupPopup() {
         await handleSignUp(values);
         resetForm();
         openConfirmation();
-        console.log("submitted values", values);
       } catch (error) {
         console.error("Error during signup:", error);
       }

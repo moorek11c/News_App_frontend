@@ -23,7 +23,6 @@ function SignInPopup() {
         await handleLogin(values);
         resetForm();
         close();
-        console.log("submitted values", values);
       } catch (error) {
         console.error("Error during signin:", error);
       }

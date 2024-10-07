@@ -3,7 +3,7 @@ import "./ConfirmationPopup.css";
 import { usePopup } from "../../Hooks/usePopup";
 
 function ConfirmationPopup() {
-  const { open: openSignIn } = usePopup("SignInPopup");
+  const { open: openSignIn } = usePopup("signin");
 
   return (
     <div>
