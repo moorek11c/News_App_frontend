@@ -23,16 +23,10 @@ This is a React-based News App that allows users to sign up, sign in, and save a
 - **Start the mock server**: npx json-server --watch db.json --port 3001
 - **Start the app**: npm run dev
 
+> **Update**: The app no longer uses `json-server` and `db.json` for data storage. Instead, it uses mock data from within the project.
+
 > **Note**: In order to sign-up or sign-in, and save cards the mock server needs to be running.
 
 ### Prerequisites
 
 - Node.js and npm installed on your machine.
-
-### Installation
-
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/moorek11c/News_App_Frontend.git
-   cd News_App_Frontend
-   ```
