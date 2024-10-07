@@ -17,8 +17,6 @@ const getNews = async (query) => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      console.log(data.articles);
-
       const errorData = await response.json();
       console.error("Error response data:", errorData);
       console.error("Error response status:", response.status);

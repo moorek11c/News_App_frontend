@@ -4,7 +4,6 @@ import { getNews } from "../../utils/API/NewsApi";
 export const SearchContext = createContext();
 
 export const UseSearchContext = () => useContext(SearchContext);
-// Create the provider component
 export const SearchProvider = ({ children }) => {
   const [query, setQuery] = useState("");
   const [articles, setArticles] = useState([]);
@@ -15,6 +14,7 @@ export const SearchProvider = ({ children }) => {
     try {
       const articles = await getNews(searchQuery);
       setArticles(articles);
+
       setHasSearched(true);
     } catch (error) {
       console.error("Failed to fetch news articles:", error);

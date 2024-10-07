@@ -16,7 +16,7 @@ function SavedNewsCards() {
 
   return (
     <div className="saved-news-cards__page">
-      <ul className="saved-news-cards__list">
+      <li className="saved-news-cards__list">
         {savedArticles.map((article) => (
           <NewsCard
             key={article.id}
@@ -25,7 +25,7 @@ function SavedNewsCards() {
             isSaved={true}
           />
         ))}
-      </ul>
+      </li>
     </div>
   );
 }

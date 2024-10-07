@@ -10,11 +10,7 @@ function Footer() {
       <nav className="footer__nav">
         <ul className="footer__links">
           <li className="footer__links-item">
-            <NavLink
-              to="/"
-              className="footer__link footer__link--home"
-              activeClassName="footer__link--active"
-            >
+            <NavLink to="/" className="footer__link footer__link--home">
               Home
             </NavLink>
           </li>

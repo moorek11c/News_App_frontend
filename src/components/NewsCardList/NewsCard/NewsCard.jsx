@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import "./NewsCard.css";
 import { UserContext } from "../../Contexts/UserContext";
 import { UseSearchContext } from "../../Contexts/SearchContext";
-import { UseSavedArticles } from "../../Contexts/SavedArticlesContext";
 import { saveCard } from "../../../utils/API/NewsApi";
 import { formatDate } from "../../../utils/dateUtils";
 import BookmarkButton from "./CardButtons/BookmarkButton/BookmarkButton";
@@ -11,11 +10,10 @@ import TrashButton from "./CardButtons/TrashButton/TrashButton";
 const NewsCard = ({ article, isSaved }) => {
   const { query } = UseSearchContext();
   const { isLoggedIn } = useContext(UserContext);
-  const { deleteArticle } = UseSavedArticles();
 
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isTrashHovered, setIsTrashHovered] = useState(false);
-  const [isBookmarkHovered, setIsBookmarkHovered] = useState(false);
+  const [isBookmarkHovered, setBookmarkHovered] = useState(false);
 
   const formattedDate = formatDate(article.publishedAt);
 
@@ -28,9 +26,9 @@ const NewsCard = ({ article, isSaved }) => {
     }
   };
 
-  const handleHoverState = (setter) => (state) => () => setter(state);
-
-  const handleDelete = () => deleteArticle(article.id);
+  const handleHoverState = (setter) => (state) => {
+    setter(state);
+  };
 
   return (
     <ul className="news-card__content">
@@ -38,7 +36,6 @@ const NewsCard = ({ article, isSaved }) => {
         {isSaved ? (
           <TrashButton
             isTrashHovered={isTrashHovered}
-            handleDelete={handleDelete}
             handleHoverState={handleHoverState(setIsTrashHovered)}
           />
         ) : (
@@ -47,7 +44,7 @@ const NewsCard = ({ article, isSaved }) => {
             isBookmarked={isBookmarked}
             isBookmarkHovered={isBookmarkHovered}
             handleBookmark={handleBookmark}
-            handleHoverState={handleHoverState(setIsBookmarkHovered)}
+            handleHoverState={handleHoverState(setBookmarkHovered)}
           />
         )}
         <img
@@ -62,7 +59,7 @@ const NewsCard = ({ article, isSaved }) => {
             {article.description || "No description"}
           </p>
           <p className="news-card__source">
-            {article.source || "Unknown source"}
+            {article.source.name || "Unknown source"}
           </p>
           {article.query && (
             <p className="news-card__keyword">{article.query}</p>

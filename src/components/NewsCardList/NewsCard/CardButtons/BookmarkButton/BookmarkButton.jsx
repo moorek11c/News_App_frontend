@@ -12,15 +12,15 @@ const BookmarkButton = ({
   handleHoverState,
 }) => (
   <button
-    onMouseEnter={handleHoverState(true)}
-    onMouseLeave={handleHoverState(false)}
+    onMouseEnter={() => handleHoverState(true)}
+    onMouseLeave={() => handleHoverState(false)}
     className="news-card__btn"
     onClick={isLoggedIn ? handleBookmark : null}
   >
     <img
       className="news-card__icon news-card__bookmark-icon"
       src={
-        isBookmarkHovered && isLoggedIn
+        isBookmarkHovered
           ? BookMarkHovered
           : isBookmarked
           ? BookmarkFilled
