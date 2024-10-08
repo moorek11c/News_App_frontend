@@ -109,8 +109,8 @@
 
 .news-card__hover-tip--trash {
   position: absolute;
-  top: 0;
-  right: 45px;
+  top: 23px;
+  left: 145px;
 }
 
 .news-card__hover-tip-text {

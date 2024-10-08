@@ -7,7 +7,7 @@ export const SavedNewsData = [
     urlToImage:
       "https://gfx.nrk.no/B9xCVqvLCHAUEHNySPWcdAF-Rpz3bTcyoE_JifgX2L6Q.jpg",
     publishedAt: "2024-10-06T14:56:46Z",
-    source: "NRK",
+    source: { name: "NRK" },
     query: "Nature",
   },
   {
@@ -19,7 +19,7 @@ export const SavedNewsData = [
     urlToImage:
       "https://i.insider.com/66311ab710dfcda40964e6cd?width=1200&format=jpeg",
     publishedAt: "2024-04-30T18:35:22Z",
-    source: "Business Insider",
+    source: { name: "Business Insider" },
     query: "Travel",
   },
   {
@@ -31,7 +31,7 @@ export const SavedNewsData = [
     urlToImage:
       "https://www.tagesspiegel.de/images/12490043/alternates/BASE_16_9_W1400/1728232543000/alba-center-yanni-wetzell.jpeg",
     publishedAt: "2024-10-06T16:35:43+00:00",
-    source: "Die Zeit",
+    source: { name: "Die Zeit" },
     query: "Basketball",
   },
 ];
