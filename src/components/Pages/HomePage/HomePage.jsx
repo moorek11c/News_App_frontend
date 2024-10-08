@@ -7,7 +7,7 @@ import "./HomePage.css";
 function HomePage() {
   return (
     <div className="home-page">
-      <div className="background-img">
+      <div className="home-page__background-img">
         <Header />
         <Main />
       </div>

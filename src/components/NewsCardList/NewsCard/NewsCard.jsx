@@ -31,8 +31,8 @@ const NewsCard = ({ article, isSaved }) => {
   };
 
   return (
-    <ul className="news-card__content">
-      <li className="news-card">
+    <div className="news-card__content">
+      <div className="news-card">
         {isSaved ? (
           <TrashButton
             isTrashHovered={isTrashHovered}
@@ -65,8 +65,8 @@ const NewsCard = ({ article, isSaved }) => {
             <p className="news-card__keyword">{article.query}</p>
           )}
         </section>
-      </li>
-    </ul>
+      </div>
+    </div>
   );
 };
 

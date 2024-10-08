@@ -6,14 +6,14 @@ import Footer from "../../Footer/Footer";
 
 function SavedNewsPage() {
   return (
-    <>
+    <div className="saved-news-page">
       <div className="saved-news-page__container">
         <Header isSavedNewsPage={true} />
       </div>
       <SavedNewsMain />
       <SavedNewsCards />
       <Footer />
-    </>
+    </div>
   );
 }
 

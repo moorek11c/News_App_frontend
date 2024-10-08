@@ -13,6 +13,10 @@
   padding-bottom: 62px;
 }
 
+.saved-news-cards__list-item {
+  list-style: none;
+}
+
 @media screen and (max-width: 768px) {
   .saved-news-cards__list {
     padding-top: 32px;

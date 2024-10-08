@@ -16,16 +16,13 @@ function SavedNewsCards() {
 
   return (
     <div className="saved-news-cards__page">
-      <li className="saved-news-cards__list">
+      <ul className="saved-news-cards__list">
         {savedArticles.map((article) => (
-          <NewsCard
-            key={article.id}
-            query={query}
-            article={article}
-            isSaved={true}
-          />
+          <li key={article.id} className="saved-news-cards__list-item">
+            <NewsCard query={query} article={article} isSaved={true} />
+          </li>
         ))}
-      </li>
+      </ul>
     </div>
   );
 }
