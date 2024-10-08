@@ -33,7 +33,13 @@ function Footer() {
               rel="noopener noreferrer"
               className="footer__link footer__link--social"
             >
-              <img src={ghLogo} alt="GitHub" />
+              <div className="footer__icon-wrapper">
+                <img
+                  src={ghLogo}
+                  alt="GitHub"
+                  className="footer__icon-image_gh"
+                />
+              </div>
             </a>
           </li>
           <li className="footer__links-item">
@@ -43,7 +49,13 @@ function Footer() {
               rel="noopener noreferrer"
               className="footer__link footer__link--social"
             >
-              <img src={fbLogo} alt="Facebook" />
+              <div className="footer__icon-wrapper">
+                <img
+                  className="footer__icon-image_fb"
+                  src={fbLogo}
+                  alt="Facebook"
+                />
+              </div>
             </a>
           </li>
         </ul>

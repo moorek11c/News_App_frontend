@@ -39,8 +39,8 @@
 
   .main__subtitle {
     height: 48px;
-    width: 452px;
     margin-bottom: 48px;
+    text-align: center;
   }
 }
 

@@ -13,6 +13,8 @@
   padding: 0;
   border-radius: 50%;
   margin-top: 80px;
+  margin-left: 104px;
+  margin-bottom: 80px;
   padding-left: 10px;
 }
 
@@ -52,16 +54,19 @@
   .about__content {
     margin-top: 40px;
     margin-left: 32px;
-    height: 168px;
-    width: 424px;
   }
 
   .about__title {
     font-size: 30px;
     line-height: 40px;
-    width: 424px;
     margin-top: 0;
     margin-bottom: 16px;
+  }
+
+  .about__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: fit-content;
   }
 }
 
@@ -91,7 +96,8 @@
   }
 
   .about__description {
-    max-width: 400px;
+    max-width: fit-content;
+    text-align: center;
   }
 
   .about__img {
@@ -115,10 +121,6 @@
     align-items: center;
   }
 
-  .about__content {
-    width: 288px;
-  }
-
   .about__title {
     width: 288px;
     height: 40px;
@@ -126,6 +128,7 @@
 
   .about__description {
     max-width: 288px;
+    text-align: left;
     width: 100%;
   }
   .about__img {
