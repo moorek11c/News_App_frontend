@@ -1,0 +1,137 @@
+.about {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  height: 624px;
+  background-color: rgb(255, 255, 255);
+}
+
+.about__img {
+  height: 464px;
+  width: 464px;
+  padding: 0;
+  border-radius: 50%;
+  margin-top: 80px;
+  margin-left: 104px;
+  margin-bottom: 80px;
+  padding-left: 10px;
+}
+
+.about__content {
+  margin-left: 56px;
+  margin-top: 131px;
+}
+
+.about__title {
+  font-family: "Roboto Slab Regular", "Inter", sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.about__description {
+  font-family: "Roboto Regular", "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    height: 354px;
+  }
+
+  .about__img {
+    height: 232px;
+    width: 232px;
+    margin: 61px 0 61px 0;
+  }
+
+  .about__content {
+    margin-top: 40px;
+    margin-left: 32px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .about__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 692px) {
+  .about {
+    height: 752px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__content {
+    margin: 0;
+    text-align: left;
+  }
+
+  .about__title {
+    width: 288px;
+    height: 40px;
+  }
+
+  .about__description {
+    max-width: fit-content;
+    text-align: center;
+  }
+
+  .about__img {
+    height: 272px;
+    width: 272px;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .about {
+    height: 752px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__title {
+    width: 288px;
+    height: 40px;
+  }
+
+  .about__description {
+    max-width: 288px;
+    text-align: left;
+    width: 100%;
+  }
+  .about__img {
+    padding: 0;
+  }
+}

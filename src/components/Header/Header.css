@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0;
+  height: 80px;
+  font-family: "Roboto Slab Medium", sans-serif, serif;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.header__home-link {
+  margin-right: auto;
+}
+
+.header__logo {
+  display: block;
+  margin-left: 104px;
+  width: 200px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .header__logo {
+    margin-left: 16px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .header__logo {
+    margin-left: 16px;
+  }
+  .header {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .header {
+    height: 56px;
+  }
+
+  .header__logo {
+    width: 117px;
+    height: 24px;
+  }
+}

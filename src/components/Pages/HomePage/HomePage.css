@@ -1,0 +1,10 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-image: url("../../../Assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 576px;
+}

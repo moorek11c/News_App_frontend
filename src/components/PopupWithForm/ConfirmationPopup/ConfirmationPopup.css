@@ -1,0 +1,46 @@
+.popup__confirmation {
+  margin-left: 36px;
+  padding: 0;
+}
+
+.popup__button_type_confirmation {
+  background-color: transparent;
+  border: none;
+}
+
+.popup__confirmation-title {
+  font-family: "Roboto Black", sans-serif, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.popup__submit-btn--confirmation {
+  width: 222px;
+  height: 18px;
+  font-size: 18px;
+  text-align: left;
+  font-family: "Inter Regular", sans-serif, serif;
+  color: rgba(47, 113, 229, 1);
+  margin-top: 14px;
+  margin-left: 36px;
+  padding-bottom: 51px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .popup__confirmation {
+    margin-left: 16px;
+  }
+
+  .popup__confirmation-title {
+    margin: 0;
+  }
+
+  .popup__submit-btn--confirmation {
+    margin-top: 14px;
+    padding-bottom: 51px;
+  }
+}

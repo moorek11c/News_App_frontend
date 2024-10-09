@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "user1@example.com",
+      "username": "user1",
+      "password": "password1",
+      "isLoggedIn": false
+    },
+    {
+      "id": "2",
+      "email": "user2@example.com",
+      "username": "user2",
+      "password": "password2",
+      "isLoggedIn": false
+    },
+    {
+      "id": "dc0d",
+      "email": "moorek11c@gmail.com",
+      "password": "1234567",
+      "username": "user",
+      "isLoggedIn": false
+    },
+    {
+      "id": "f9ea",
+      "email": "ryan123@mail.com",
+      "password": "123456789",
+      "username": "user",
+      "isLoggedIn": false
+    },
+    {
+      "id": "b4e0",
+      "email": "1ryan2@mail.com",
+      "password": "Bikes209",
+      "username": "Ryan",
+      "isLoggedIn": false
+    },
+    {
+      "id": "8897",
+      "email": "moorek11c11@gmail.com",
+      "password": "1234567890",
+      "username": "Ryan",
+      "isLoggedIn": false
+    },
+    {
+      "id": "d68e",
+      "email": "ryan@mail.com",
+      "password": "Bikes209!",
+      "username": "Ryan",
+      "isLoggedIn": false
+    }
+  ],
+  "cards": [
+    {
+      "id": "ec04",
+      "article": {
+        "source": {
+          "id": "usa-today",
+          "name": "USA Today"
+        },
+        "author": "Bailey Gallion",
+        "title": "'It could be anything': Police dig at Columbus home after woman's backyard discovery goes viral",
+        "description": "Columbus resident Katie Santry found what appears to be a rug buried in her backyard. Now she's gone viral, and Columbus police sent cadaver dogs.",
+        "url": "https://www.usatoday.com/story/news/nation/2024/10/04/rug-buried-columbus-ohio-katie-santry/75512592007/",
+        "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/04/NCOD/75511814007-media-2.jpg?crop=1279,721,x0,y119&width=1279&height=721&format=pjpg&auto=webp",
+        "publishedAt": "2024-10-04T15:12:24+00:00",
+        "content": "COLUMBUS, Ohio Police are investigating a strange finding buried in a backyard of a Columbus woman's home after her videos went viral on TikTok.\r\n\"It could be anything,\" Jennifer Watson, spokeswoman … [+2966 chars]"
+      },
+      "isSaved": true,
+      "query": "dogs"
+    },
+    {
+      "id": "28a1",
+      "article": {
+        "source": {
+          "id": "politico",
+          "name": "Politico"
+        },
+        "author": null,
+        "title": "Vance’s media strategy takes a turn",
+        "description": "He was Trump’s policy whisperer to key voting blocs. Now, he’s fueling rumors that Haitian immigrants in Ohio are eating cats and dogs.",
+        "url": "https://www.politico.com/news/2024/09/14/vance-trump-media-strategy-00179209",
+        "urlToImage": null,
+        "publishedAt": "2024-09-14T20:58:06+00:00",
+        "content": "He was Trump’s policy whisperer to key voting blocs. Now, he’s fueling rumors that Haitian immigrants in Ohio are eating cats and dogs."
+      },
+      "isSaved": true,
+      "query": "dogs"
+    }
+  ]
+}

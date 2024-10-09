@@ -1,0 +1,26 @@
+.saved-news-cards__page {
+  background-color: rgba(245, 246, 247, 1);
+}
+
+.saved-news-cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+  padding-top: 80px;
+  padding-bottom: 62px;
+}
+
+.saved-news-cards__list-item {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .saved-news-cards__list {
+    padding-top: 32px;
+    margin: 0;
+    gap: 8px;
+  }
+}

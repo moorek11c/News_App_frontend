@@ -1,0 +1,91 @@
+.navbar__container {
+  display: flex;
+  padding: 0;
+  justify-items: right;
+  align-items: center;
+  font-family: "Roboto Medium", sans-serif, "Inter";
+}
+
+.navbar__desktop {
+  display: flex;
+  align-items: center;
+  margin-right: 104px;
+}
+
+.navbar__hamburger-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar--saved-news .navlinks__link {
+  color: black;
+}
+
+.navbar--saved-news .authButton__sign-out {
+  color: black;
+  border-color: black;
+}
+
+.navlinks__link--active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 150%;
+  background-color: black;
+  position: absolute;
+  bottom: -31px;
+  left: -25px;
+}
+
+.mobile-menu--open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the mobile menu takes full width */
+  max-width: 100%; /* Prevent exceeding the viewport width */
+  height: 230px;
+  background-color: rgba(26, 27, 34, 1);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+@media screen and (max-width: 829px) {
+  .navbar__desktop {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .navbar__desktop {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .navbar__desktop {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .navbar__desktop {
+    display: none;
+  }
+
+  .navbar__hamburger-icon {
+    display: flex;
+    margin-right: 16px;
+  }
+
+  .navbar--saved-news .authButton__icon .authButton__sign-out {
+    color: white;
+    border-color: white;
+  }
+}
