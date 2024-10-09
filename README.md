@@ -13,15 +13,15 @@ This is a news app that fetches news articles from a News API and allows users t
 
 ### Home Page
 
-![Home Page]("./src/Assets/ReadmeImages/loggedout.png")
+![Home Page](./src/Assets/ReadmeImages/loggedout.png)
 
 ### Signed In
 
-![Signed In]("./src/Assets/ReadmeImages/logged-in-page.png")
+![Signed In](./src/Assets/ReadmeImages/logged-in-page.png)
 
 ### Saved News
 
-![Saved News]("./src/Assets/ReadmeImages/saved-news-page.png")
+![Saved News](./src/Assets/ReadmeImages/saved-news-page.png)
 
 ## Features
 
