@@ -1,32 +1,59 @@
 # News App Frontend
 
-[link to the deployed site](https://moorek11c.github.io/News_App_frontend/)
+This is a news app that fetches news articles from a News API and allows users to sign up, sign in, and save articles to a saved-news page.
 
-This is a React-based News App that allows users to sign up, sign in, and save articles to a separate saved-news page. The app uses a mock server with `db.json` for data storage and Vite for the project setup and build process.
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+
+## Screenshots
+
+### Home Page
+
+![Home Page]("./src/Assets/ReadmeImages/loggedout.png")
+
+### Signed In
+
+![Signed In]("./src/Assets/ReadmeImages/logged-in-page.png")
+
+### Saved News
+
+![Saved News]("./src/Assets/ReadmeImages/saved-news-page.png")
 
 ## Features
 
 - **User Authentication**: Users can sign up and sign in to the app.
 - **Save Articles**: Logged-in users can bookmark and save articles to a saved-news page.
 - **News API Integration**: Fetches news articles from a News API.
-- **Mock Server**: Uses `db.json` as a mock server for data storage.
+- **Responsive Design**: The app is fully responsive and works on all screen sizes.
+- **Pagination**: The news articles are paginated and users can navigate through pages.
+- **Search**: Users can search for news articles by entering a search query.
+
+## Link to live site
+
+[News App](https://moorek11c.github.io/News_App_frontend/)
 
 ## Technologies Used
 
 - **React**: For building the user interface.
 - **Vite**: For project setup and build process.
 - **News API**: For fetching news articles.
-- **json-server**: For running the mock server with `db.json`.
 
 ## Getting Started
 
-- **Start the mock server**: npx json-server --watch db.json --port 3001
-- **Start the app**: npm run dev
+- Clone the repository: `git clone
 
-> **Update**: The app no longer uses `json-server` and `db.json` for data storage. Instead, it uses mock data from within the project.
+- Install dependencies: `npm install`
 
-> **Note**: In order to sign-up or sign-in, and save cards the mock server needs to be running.
+- Start the development server: `npm run dev`
 
 ### Prerequisites
 
 - Node.js and npm installed on your machine.
+
+- A News API key. You can get one [here](https://newsapi.org/).
+
+- System requirements: Windows, Mac OS, or Linux.
