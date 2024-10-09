@@ -3,7 +3,7 @@
 This is a news app that fetches news articles from a News API and allows users to sign up, sign in, and save articles to a saved-news page.
 
 ## Table of Contents
-
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
