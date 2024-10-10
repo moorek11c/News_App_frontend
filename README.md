@@ -36,12 +36,6 @@ This is a news app that fetches news articles from a News API and allows users t
 
 [News App](https://moorek11c.github.io/News_App_frontend/)
 
-## Technologies Used
-
-- **React**: For building the user interface.
-- **Vite**: For project setup and build process.
-- **News API**: For fetching news articles.
-
 ## Getting Started
 
 - Clone the repository: `git clone
